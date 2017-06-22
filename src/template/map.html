@@ -1,0 +1,127 @@
+<section class="map">
+    <p class="title">Потрогайте бельё своими руками!
+        <span>Приглашаем вас в наши магазины:</span>
+    </p>
+    <div class="wrapper"></div>
+    <div id="map"></div>
+
+</section>
+
+<script type="text/javascript">
+// Группы объектов
+var groups = [
+        {
+            center: [59.924037, 30.310667],
+            name: "ул. Садовая, 51",
+            desc: "",
+            phone: "8 (921) 631-95-13"
+        },
+        {
+            center: [59.959516, 30.289556],
+            name: "Чкаловский пр., 7",
+            desc: "ТЦ Чкаловский, 1 этаж",
+            phone: "8 (921) 631-95-08"
+        },
+        {
+            center: [59.926977, 30.353867],
+            name: "Кузнечный переулок, 15",
+            desc: "ТЦ Чкаловский, 1 этаж",
+            phone: "8 (921) 631-95-39"
+        },
+        {
+            center: [59.930228, 30.354343],
+            name: "ул. Марата, 5",
+            desc: "ТЦ Олимпик Плаза, 1 этаж",
+            phone: "8 (921) 631-95-18"
+        },
+        {
+            center: [59.855715, 30.224384],
+            name: "ул. Маршала Жукова, 35",
+            desc: "ТЦ Юго-Западный, 1 этаж, справа",
+            phone: "8 (921) 631-95-14"
+        },
+        {
+            center: [59.916609, 29.770699],
+            name: "г. Ломоносов, ул. Кронштадская, 1",
+            desc: "ТРК Меншиков холл, 2 этаж",
+            phone: "8 (931) 236-47-54"
+        }
+    ];
+
+
+
+ymaps.ready(init);
+
+function init() {
+
+    // Создание экземпляра карты.
+    var myMap = new ymaps.Map('map', {
+            center: [59.930480, 30.315181],
+            zoom: 14, 
+            controls:[]
+        }),
+        // Контейнер для меню.
+        menu = $('<ul class="map_menu"></ul>');
+        
+    for (var i = 0, l = groups.length; i < l; i++) {
+        createMenuGroup(groups[i], i);
+    }
+
+    function createMenuGroup (group,i) {
+
+        var placemark = new ymaps.Placemark(group.center, { },
+        {
+            iconLayout: 'default#image',            
+            iconImageHref: 'img/ymarker.png',
+            iconImageSize: [42, 64],
+            iconImageOffset: [-21, -64],
+        });
+
+        myMap.geoObjects.add(placemark);
+
+        placemark.events.add('click', function () {
+            myMap.geoObjects.each(function (geoObject) {           
+                geoObject.options.set({
+                    iconImageHref: 'img/ymarker.png'
+                });                   
+            });
+            menuItem.siblings('li').removeClass('active');
+            menuItem.addClass('active');
+            placemark.options.set({
+                iconImageHref: 'img/ymarker_active.png'
+            });
+        });        
+        
+        var menuItem = $('<li><a href="#"><p class="name"><span>'+ group.name + '</span></p><p class="desc">' + group.desc + '</p><p class="desc">' + group.phone + '</p></a></li>');
+        menuItem
+            .appendTo(menu)
+            // При клике по пункту подменю открываем/закрываем баллун у метки.
+            .find('a')
+            .bind('click', function () {
+                myMap.geoObjects.each(function (geoObject) {           
+                    geoObject.options.set({
+                        iconImageHref: 'img/ymarker.png'
+                    });                   
+                })
+                $(this).closest('ul').find('li').removeClass('active');
+                $(this).closest('li').addClass('active');
+                 myMap.panTo(
+                    // Координаты нового центра карты
+                    group.center, {
+                        flying: true,
+                        zoom:10
+                    }
+                );
+
+                placemark.options.set({
+                    iconImageHref: 'img/ymarker_active.png'
+                });
+                return false;
+            });
+    }
+
+    menu.appendTo($('.map .wrapper'));
+    // Выставляем масштаб карты чтобы были видны все группы.
+    myMap.setBounds(myMap.geoObjects.getBounds());
+}
+</script>

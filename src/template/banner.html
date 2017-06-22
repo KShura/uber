@@ -1,0 +1,39 @@
+<section class="banner">
+    <div class="wrapper">
+        <p class="title">Превосходная коллекция постельного белья <span>от итальянских дизайнеров для крепкого сна</span></p>
+        <div class="banner_pink">Выберите подарок к заказу!</div>
+        <div class="banner_text">
+            <p class="title">Комплект «Paradiso»</p>
+            <ul>
+                <li>Мако-сатин покорит Вас<br>с первого ощущения</li>
+                <li>Обеспечит легкое пробуждение<br>и отличное настроение</li>
+                <li>Экологически чистая, необыкновенно<br>мягкая и идеально гладкая ткань</li>
+                <li>100% длинноволокнистый хлопок</li>
+                <li>Прочное и долговечное белье</li>
+            </ul>
+            <div class="prices">
+                <span class="old">6 200 <span class="rouble">a</span></span>                
+                <span class="new">5 600 <span class="rouble">a</span></span>
+            </div>
+            <a class="order" href="#collection">Заказать</a>
+        </div>
+        <script>
+            $( ".order" ).click(function(e) {
+                e.preventDefault();
+                $(".collection-ul").trigger("configuration", ["scroll.duration", 0, true]);
+                $('.collection-ul').trigger('slideTo', 5);
+                $(".collection-ul").trigger("configuration", ["scroll.duration", 500, true]);
+                var target_top = $('#collection').offset().top;
+                $('html, body').animate({
+                    scrollTop: target_top
+                }, 'slow');
+            });
+        </script>
+        <div class="icons">
+            <div>Экспресс-доставка за час</div>
+            <div>Привезём несколько<br>комплектов на выбор</div>
+            <div>Качественная и стильная<br>упаковка</div>
+            <div>Натуральная эко-ткань,<br>нежная на ощупь</div>
+        </div>
+    </div>
+</section>

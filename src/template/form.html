@@ -1,0 +1,26 @@
+<section class="form">
+    <div class="wrapper">
+        <form name="bottom_form" action="/send.php" method="POST">
+            <p>Остались вопросы? Задайте их нам!<span>Менеджер свяжется с Вами в ближайшее время</span></p>
+            <div class="left">
+                <div class="field">
+                    <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                </div>
+                <div class="field">
+                    <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                </div>  
+            </div>
+            <div class="field for_textarea">
+                <textarea name="comment" placeholder="Вопрос"></textarea><span class="error">Пожалуйста, заполните поле</span>
+            </div>
+            <div class="check">
+                <label>
+                    <input type="checkbox" name="check" id="check">
+                    <span class="checkbox"></span>
+                    <span class="checkbox_text">Я согласен на обработку персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                </label>
+            </div>
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+</section>

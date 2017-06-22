@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1220">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Культ сна</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/libs/jquery.formstyler.js"></script>
+    <script src="js/libs/jquery.carouFredSel-6.2.1.js"></script>
+    <script src="js/libs/jquery.maskedinput-1.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+    <script src="js/app.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <img class="logo" src="img/logo.png">
+            <div class="land_desc">
+                Доставка постельного белья по Санкт-Петербургу и Ленинградской области
+            </div>
+            <div class="phones">
+                <p><span class="skype"><a href="skype:dinka_ldinka1?chat">+7 (921) 631-95-54</a></span> | <span>+7 (812) 449-75-14</span> | <span>+7 (921) 631-95-51</span></p>
+                <a class="callback popup_show" href="#callback">Заказать обратный звонок</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="wrapper">
+            <p class="title">Превосходная коллекция постельного белья <span>от итальянских дизайнеров для крепкого сна</span></p>
+            <div class="banner_pink">Выберите подарок к заказу!</div>
+            <div class="banner_text">
+                <p class="title">Комплект «Paradiso»</p>
+                <ul>
+                    <li>Мако-сатин покорит Вас<br>с первого ощущения</li>
+                    <li>Обеспечит легкое пробуждение<br>и отличное настроение</li>
+                    <li>Экологически чистая, необыкновенно<br>мягкая и идеально гладкая ткань</li>
+                    <li>100% длинноволокнистый хлопок</li>
+                    <li>Прочное и долговечное белье</li>
+                </ul>
+                <div class="prices">
+                    <span class="old">6 200 <span class="rouble">a</span></span>                
+                    <span class="new">5 600 <span class="rouble">a</span></span>
+                </div>
+                <a class="order" href="#collection">Заказать</a>
+            </div>
+            <script>
+                $( ".order" ).click(function(e) {
+                    e.preventDefault();
+                    $(".collection-ul").trigger("configuration", ["scroll.duration", 0, true]);
+                    $('.collection-ul').trigger('slideTo', 5);
+                    $(".collection-ul").trigger("configuration", ["scroll.duration", 500, true]);
+                    var target_top = $('#collection').offset().top;
+                    $('html, body').animate({
+                        scrollTop: target_top
+                    }, 'slow');
+                });
+            </script>
+            <div class="icons">
+                <div>Экспресс-доставка за час</div>
+                <div>Привезём несколько<br>комплектов на выбор</div>
+                <div>Качественная и стильная<br>упаковка</div>
+                <div>Натуральная эко-ткань,<br>нежная на ощупь</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="gift">
+        <div class="wrapper">
+            <p class="title">Получите подарок на Ваш выбор<span>вместе с роскошным комплектом постельного белья</span></p>
+            <div class="table">
+                <div class="td">
+                    <img src="img/candles.png" alt="" title="">
+                </div>
+                <div class="td">
+                    <img src="img/aroma.png" alt="" title="">
+                </div>
+                <div class="td">
+                    <img src="img/sashe.png" alt="" title="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="collection" id="collection">
+        <div class="wrapper">
+            <p class="title">Посмотрите эксклюзивную коллекцию,<span>которую Вы не найдете ни в одном магазине города</span></p>
+            <div class="collection-control">
+                <a class="arrow arrow_left" href="" id="collection-left"></a>
+                <a class="arrow arrow_right" href="" id="collection-right"></a>
+            </div>
+            <ul class="collection-ul">
+                    <li class="item">
+                                <div class="right">
+                                    <div class="prices">
+                                        <span class="new new1"><span class="price">3 950 </span> <span class="rouble">a</span></span>
+                                        <span class="new new2"><span class="price">5 100 </span> <span class="rouble">a</span></span>
+                                        <span class="new new3"><span class="price">5 600 </span> <span class="rouble">a</span></span>
+                
+                                        <span class="old old1">4 380 <span class="rouble">a</span></span>                        
+                                        <span class="old old2">5 700 <span class="rouble">a</span></span>
+                                        <span class="old old3">6 200 <span class="rouble">a</span></span>
+                                    </div>
+                                    <div class="pig pig1">Сэкономь 430 <span class="rouble">a</span></div>
+                                    <div class="pig pig2">Сэкономь 600 <span class="rouble">a</span></div>
+                                    <div class="pig pig3">Сэкономь 600 <span class="rouble">a</span></div>
+                
+                                    <form method="POST" action="send.php" name="order">
+                                        <input type="hidden" name="item" value="La Prima Формула комфорта">
+                                        <input type="hidden" name="price" value="3 950">
+                                        <input type="hidden" name="image" value="img/1.1.png">
+                                        <div class="field">
+                                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div>
+                                        <div class="field">
+                                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div>
+                                        <p><strong>Выберите подарок:</strong></p>
+                                        
+                                        <div class="gift_inputs">
+                                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                                            <label for="candles">Свечи</label>
+                
+                                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                                            <label for="aroma">Аромапалочки</label>
+                                            
+                                            <input name="gift" type="radio" value="Саше" id="sashe">
+                                            <label for="sashe">Саше</label>
+                                        </div>
+                                        <div class="check">
+                                            <label>
+                                                <input type="checkbox" name="check" id="check">
+                                                <span class="checkbox"></span>
+                                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                                            </label>
+                                        </div>
+                
+                                        <div class="colors many_colors">                            
+                                            <a href="" class="colors_arrow" id="colors-left">&#8592;</a>
+                                            <a href="" class="colors_arrow" id="colors-right">&#8594;</a>
+                                            <span class="title">Цвет: </span>
+                                            <div class="wrap">
+                                                <ul class="colors-ul">
+                                                    <li>
+                                                        <input name="color" type="radio" value="Кофе полосы" id="coffee_stripes" checked>
+                                                        <label for="coffee_stripes"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Кофе пейсли" id="coffee_peisly">
+                                                        <label for="coffee_peisly"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Белый пейсли" id="white_peisly">
+                                                        <label for="white_peisly"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Ваниль пейсли" id="vanilla_peisly">
+                                                        <label for="vanilla_peisly"></label>
+                                                    </li>
+                                                    
+                                                    <li>
+                                                        <input name="color" type="radio" value="Ваниль полосы" id="vanilla_stripes">
+                                                        <label for="vanilla_stripes"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Морская пейсли" id="sea_peisly">
+                                                        <label for="sea_peisly"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Морская полосы" id="sea_stripes">
+                                                        <label for="sea_stripes"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Роза пейсли" id="rose_peisly">
+                                                        <label for="rose_peisly"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Роза полосы" id="rose_stripes">
+                                                        <label for="rose_stripes"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Серебрянная пейсли" id="silver_peisly">
+                                                        <label for="silver_peisly"></label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="color" type="radio" value="Серебрянная полосы" id="silver_stripes">
+                                                        <label for="silver_stripes"></label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <script>
+                                        $(function() {
+                                            $('.colors-ul').carouFredSel({
+                                                circular: true,
+                                                infinite: true,
+                                                responsive: false,
+                                                width:350,
+                                                prev: '#colors-left',
+                                                next: '#colors-right',
+                                                scroll: { items: 1
+                                                },
+                                                auto: false,
+                                                items: {
+                                                    visible: {
+                                                        min: 7,
+                                                        max: 7
+                                                    },
+                                                },
+                                                swipe: {
+                                                    onTouch: false
+                                                }
+                                            }
+                                            
+                                            );
+                                        });
+                                        </script>
+                                        <select name="size" id="collection_images1_size">
+                                            <option data="0" value="Выберите размер">Выберите размер</option>
+                                            <option data="1" value="1,5 спальный">1,5 спальный</option>
+                                            <option data="2" value="2 спальный">2 спальный</option>
+                                            <option data="3" value="Дуэт">Дуэт</option>
+                                        </select>
+                
+                                        <input type="submit" value="Заказать">
+                                    </form> 
+                                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                                </div>
+                                <p class="collection_title">La Prima «Формула комфорта»</p>
+                                <div class="left_gallery">
+                                    <ul class="collection_images" id="collection_images1">
+                                        <li number="1" class="coffee_stripes">
+                                            <img full-size="img/1.1_full.png" src="img/1.1.png" alt="" title="">
+                                        </li>
+                                        <li number="2" class="coffee_peisly">
+                                            <img full-size="img/1.2_full.png" src="img/1.2.png" alt="" title="">
+                                        </li>
+                                        <li number="3" class="white_peisly">
+                                            <img full-size="img/1.3_full.png" src="img/1.3.png" alt="" title="">
+                                        </li>
+                                        <li number="4" class="vanilla_peisly">
+                                            <img full-size="img/1.4_full.png" src="img/1.4.png" alt="" title="">
+                                        </li>
+                                        <li number="5" class="vanilla_stripes">
+                                            <img full-size="img/1.5_full.png" src="img/1.5.png" alt="" title="">
+                                        </li>
+                                        <li number="6" class="sea_peisly">
+                                            <img full-size="img/1.6_full.png" src="img/1.6.png" alt="" title="">
+                                        </li>
+                                        <li number="7" class="sea_stripes">
+                                            <img full-size="img/1.7_full.png" src="img/1.7.png" alt="" title="">
+                                        </li>
+                                        <li number="8" class="rose_peisly">
+                                            <img full-size="img/1.8_full.png" src="img/1.8.png" alt="" title="">
+                                        </li>
+                                        <li number="9" class="rose_stripes">
+                                            <img full-size="img/1.9_full.png" src="img/1.9.png" alt="" title="">
+                                        </li>
+                                        <li number="10" class="silver_peisly">
+                                            <img full-size="img/1.11_full.png" src="img/1.11.png" alt="" title="">
+                                        </li>
+                                        <li number="11" class="silver_stripes">
+                                            <img full-size="img/1.10_full.png" src="img/1.10.png" alt="" title="">
+                                        </li>
+                                    </ul>
+                                    <div class="control">
+                                        <a class="gallery_arrow" href="" id="collection_images1_left">&#8592;</a>
+                                        <span><span id="collection_images1_current">1</span>/<span id="collection_images1_count"></span></span>
+                                        <a class="gallery_arrow"  href="" id="collection_images1_right">&#8594;</a>
+                                    </div>
+                                    <a class="full_size" id="collection_images1_full_size" data-fancybox="collection_images1" href="img/1.1_full.png"></a>
+                
+                                    <div class="hotels"></div>
+                                </div>
+                                <div class="left">
+                                    <div class="table">
+                                        <p class="tr"><span class="td">Материал</span><span class="td">страйп-сатин</span></p>
+                                        <p class="tr"><span class="td">Плотность</span><span class="td">220 ТС</span></p>
+                                        <p class="tr"><span class="td">Состав</span><span class="td">100% хлопок</span></p>
+                                        <p class="tr"><span class="td">Дополнительно</span><span class="td">простыня на резинке</span></p>
+                                    </div>
+                                    <div class="desc"><p>Коллекция «Формула комфорта» выполнена в великолепной цветовой палитре, которая сочетает в себе лаконичный и в то же время элегантный дизайн. Такое постельное белье вы можете встретить в лучших отелях мира и стильных интерьерах ведущих мировых дизайнеров. Вы можете собрать комплект из любых цветов.</p></div>
+                                </div>
+                                <script>
+                                $(function() {
+                                    $('#collection_images1').carouFredSel({
+                                        circular: true,
+                                        infinite: true,
+                                        responsive: true,
+                                        height: 410,
+                                        width:750,
+                                        prev: '#collection_images1_left',
+                                        next: '#collection_images1_right',
+                                        scroll: { items: 1,
+                                            onAfter:  function(data){
+                                            $('#collection_images1_full_size').attr('href', $(this).find('img').attr('full-size'));
+                                            $('#collection_images1_current').html($(this).find('li').attr('number'));
+                                            }
+                                        },
+                                        onCreate:  function(data){
+                                            $('#collection_images1_count').html(this.childElementCount);
+                                        },
+                
+                                        auto: false,
+                                        items: {
+                                            visible: {
+                                                min: 1,
+                                                max: 1
+                                            },
+                                            width:750 
+                                        },
+                                        swipe: {
+                                            onTouch: true
+                                        }
+                                    });
+                
+                                    $('.many_colors input[name="color"]').change(function() {
+                                        var index = $('#collection_images1 li.' + $(this).attr('id')).attr('number');
+                                        $('#collection_images1').trigger('slideTo', index-1);
+                                    });
+                                 });
+                                </script>
+                            </li>
+                    <li class="item">
+                                <div class="right">
+                                    <div class="prices">
+                                        <span class="new new1"><span class="price">6 000</span> <span class="rouble">a</span></span>
+                                        <span class="old old1">6 900 <span class="rouble">a</span></span>
+                                    </div>
+                                    <div class="pig pig1">Сэкономь 900 <span class="rouble">a</span></div>
+                
+                                    <form method="POST" action="send.php" name="order">
+                                        <input type="hidden" name="item" value="La Prima «Сердечки»">
+                                        <input type="hidden" name="price" value="6 000">
+                                        <input type="hidden" name="image" value="img/2.1.png">
+                                        <div class="field">
+                                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div>
+                                        <div class="field">
+                                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div> 
+                                        <p><strong>Выберите подарок:</strong></p>
+                                        
+                                        <div class="gift_inputs">
+                                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                                            <label for="candles">Свечи</label>
+                
+                                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                                            <label for="aroma">Аромапалочки</label>
+                                            
+                                            <input name="gift" type="radio" value="Саше" id="sashe">
+                                            <label for="sashe">Саше</label>
+                                        </div>
+                                        <div class="check">
+                                            <label>
+                                                <input type="checkbox" name="check" id="check">
+                                                <span class="checkbox"></span>
+                                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                                            </label>
+                                        </div>
+                
+                                        <div class="colors">
+                                            <span class="title">Цвет: </span>
+                                            <input name="color" type="radio" value="Сердечки" id="hearts" checked>
+                                            <label for="hearts"></label>
+                                        </div>
+                
+                                        <select name="size" id="collection_images2_size">
+                                            <option data="0" value="Выберите размер">Выберите размер</option>
+                                            <option data="1" value="1,5 спальный">1,5 спальный 150*220, - наволочка 40*40</option>
+                                        </select>
+                
+                                        <input type="submit" value="Заказать">
+                                    </form> 
+                                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                                </div>
+                                <p class="collection_title">La Prima «Сердечки»</p>
+                                <div class="left_gallery">
+                                    <ul class="collection_images" id="collection_images2">
+                                        <li number="1">
+                                            <img full-size="img/2.1_full.png" src="img/2.1.png" alt="" title="">
+                                        </li>
+                                        <li number="2">
+                                            <img full-size="img/2.2_full.png" src="img/2.2.png" alt="" title="">
+                                        </li>
+                                        <li number="3">
+                                            <img full-size="img/2.3_full.png" src="img/2.3.png" alt="" title="">
+                                        </li>
+                                    </ul>
+                                    <div class="control">
+                                        <a class="gallery_arrow" href="" id="collection_images2_left">&#8592;</a>
+                                        <span><span id="collection_images2_current">1</span>/<span id="collection_images2_count"></span></span>
+                                        <a class="gallery_arrow"  href="" id="collection_images2_right">&#8594;</a>
+                                    </div>
+                                    <a class="full_size" id="collection_images2_full_size" data-fancybox="collection_images2" href="img/2.1_full.png"></a>
+                
+                                    <!--<div class="hotels"></div>-->
+                                </div>
+                                <div class="left">
+                                    <div class="table">
+                                        <p class="tr"><span class="td">Материал</span><span class="td">сатин</span></p>
+                                        <p class="tr"><span class="td">Плотность</span><span class="td">205 ТС</span></p>
+                                        <p class="tr"><span class="td">Состав</span><span class="td">100% хлопок</span></p>
+                                        <p class="tr"><span class="td">Наполнитель</span><span class="td">полиэфирное волокно</span></p>
+                                    </div>
+                                    <div class="desc"><p>Состав набора: 1,5 спальный комплект постельного белья, стеганое покрывало, декоративная наволочка 40*40. Коллекция выполнена из натуральной, экологически чистой сатиновой ткани с использованием современных безопасных красителей. Стильное постельное белье станет ярким дополнением интерьера детской комнаты. Есть возможность использовать покрывало в качестве легкого одеяла, так как его очень легко стирать в стиральной машине.</p></div>
+                                </div>
+                                <script>
+                                $(function() {
+                                    $('#collection_images2').carouFredSel({
+                                        circular: true,
+                                        infinite: true,
+                                        responsive: true,
+                                        height: 410,
+                                        width:750,
+                                        prev: '#collection_images2_left',
+                                        next: '#collection_images2_right',
+                                        scroll: { items: 1,
+                                            onAfter:  function(data){
+                                            $('#collection_images2_full_size').attr('href', $(this).find('img').attr('full-size'));
+                                            $('#collection_images2_current').html($(this).find('li').attr('number'));
+                                            }
+                                        },
+                                        onCreate:  function(data){
+                                            $('#collection_images2_count').html(this.childElementCount);
+                                        },
+                
+                                        auto: false,
+                                        items: {
+                                            visible: {
+                                                min: 1,
+                                                max: 1
+                                            },
+                                            width:750 
+                                        },
+                                        swipe: {
+                                            onTouch: true
+                                        }
+                                    });
+                                 });
+                                </script>
+                            </li>
+                    <li class="item">
+                                <div class="right">
+                                    <div class="prices">
+                                        <span class="new new1"><span class="price">5 200 </span> <span class="rouble">a</span></span>
+                                        <span class="new new2"><span class="price">6 800 </span> <span class="rouble">a</span></span>
+                                        <span class="new new3"><span class="price">7 500 </span> <span class="rouble">a</span></span>
+                                        <span class="new new4"><span class="price">8 900 </span> <span class="rouble">a</span></span>
+                
+                                        <span class="old old1">5 990 <span class="rouble">a</span></span>                        
+                                        <span class="old old2">7 500 <span class="rouble">a</span></span>
+                                        <span class="old old3">8 350 <span class="rouble">a</span></span>
+                                        <span class="old old4">9 900 <span class="rouble">a</span></span>
+                                    </div>
+                                    <div class="pig pig1">Сэкономь 790 <span class="rouble">a</span></div>
+                                    <div class="pig pig2">Сэкономь 700 <span class="rouble">a</span></div>
+                                    <div class="pig pig3">Сэкономь 850 <span class="rouble">a</span></div>
+                                    <div class="pig pig4">Сэкономь 1000 <span class="rouble">a</span></div>
+                
+                                    <form method="POST" action="send.php" name="order">
+                                        <input type="hidden" name="item" value="La Prima «Эдем»">
+                                        <input type="hidden" name="price" value="5 200">
+                                        <input type="hidden" name="image" value="img/3.1.png">
+                                        <div class="field">
+                                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div>
+                                        <div class="field">
+                                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div> 
+                                        <p><strong>Выберите подарок:</strong></p>
+                                        
+                                        <div class="gift_inputs">
+                                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                                            <label for="candles">Свечи</label>
+                
+                                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                                            <label for="aroma">Аромапалочки</label>
+                                            
+                                            <input name="gift" type="radio" value="Саше" id="sashe">
+                                            <label for="sashe">Саше</label>
+                                        </div>
+                                        <div class="check">
+                                            <label>
+                                                <input type="checkbox" name="check" id="check">
+                                                <span class="checkbox"></span>
+                                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                                            </label>
+                                        </div>
+                
+                                        <div class="colors">
+                                            <span class="title">Цвет: </span>
+                                            <input name="color" type="radio" value="нежно-голубой с принтом" id="edem" checked>
+                                            <label for="edem"></label>
+                                        </div>
+                
+                                        <select name="size" id="collection_images3_size">
+                                            <option data="0" value="Выберите размер">Выберите размер</option>
+                                            <option data="1" value="1,5 спальный">1,5 спальный</option>
+                                            <option data="2" value="2 спальный">2 спальный</option>
+                                            <option data="3" value="евро">Евро</option>
+                                            <option data="4" value="дуэт">Дуэт</option>
+                                        </select>
+                
+                                        <input type="submit" value="Заказать">
+                                    </form> 
+                                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                                </div>
+                                <p class="collection_title">La Prima «Эдем»</p>
+                                <div class="left_gallery">
+                                    <ul class="collection_images" id="collection_images3">
+                                        <li number="1">
+                                            <img full-size="img/3.1_full.png" src="img/3.1.png" alt="" title="">
+                                        </li>
+                                        <li number="2">
+                                            <img full-size="img/3.2_full.png" src="img/3.2.png" alt="" title="">
+                                        </li>
+                                        <li number="3">
+                                            <img full-size="img/3.3_full.png" src="img/3.3.png" alt="" title="">
+                                        </li>
+                                        <li number="4">
+                                            <img full-size="img/3.4_full.png" src="img/3.4.png" alt="" title="">
+                                        </li>
+                                        <li number="5">
+                                            <img full-size="img/3.5_full.png" src="img/3.5.png" alt="" title="">
+                                        </li>
+                                    </ul>
+                                    <div class="control">
+                                        <a class="gallery_arrow" href="" id="collection_images3_left">&#8592;</a>
+                                        <span><span id="collection_images3_current">1</span>/<span id="collection_images3_count"></span></span>
+                                        <a class="gallery_arrow"  href="" id="collection_images3_right">&#8594;</a>
+                                    </div>
+                                    <a class="full_size" id="collection_images3_full_size" data-fancybox="collection_images3" href="img/3.1_full.png"></a>
+                
+                                    <div class="hotels clients"></div>
+                                </div>
+                                <div class="left">
+                                    <div class="table">
+                                        <p class="tr"><span class="td">Материал</span><span class="td">мако-сатин</span></p>
+                                        <p class="tr"><span class="td">Плотность</span><span class="td">300 ТС</span></p>
+                                        <p class="tr"><span class="td">Состав</span><span class="td">100% египетский хлопок</span></p>
+                                        <p class="tr"><span class="td">Дополнительно</span><span class="td">наволочки-трансформеры</span></p>
+                                    </div>
+                                    <div class="desc"><p>Увеличенный размер клапана наволочки позволяет одеть ее на подушку всего за 10 секунд. Благодаря специальным прорезям, вы теперь можете заправить пододеяльник без посторонней помощи в 3 раза быстрее. Постельное белье мягкое, гладкое на ощупь. Прочное и долговечное: не пилингуется, сохраняет яркость и блеск. За ним также легко ухаживать: быстро сохнет и практически не мнется.</p></div>
+                                </div>
+                                <script>
+                                $(function() {
+                                    $('#collection_images3').carouFredSel({
+                                        circular: true,
+                                        infinite: true,
+                                        responsive: true,
+                                        height: 410,
+                                        width:750,
+                                        prev: '#collection_images3_left',
+                                        next: '#collection_images3_right',
+                                        scroll: { items: 1,
+                                            onAfter:  function(data){
+                                            $('#collection_images3_full_size').attr('href', $(this).find('img').attr('full-size'));
+                                            $('#collection_images3_current').html($(this).find('li').attr('number'));
+                                            }
+                                        },
+                                        onCreate:  function(data){
+                                            $('#collection_images3_count').html(this.childElementCount);
+                                        },
+                
+                                        auto: false,
+                                        items: {
+                                            visible: {
+                                                min: 1,
+                                                max: 1
+                                            },
+                                            width:750 
+                                        },
+                                        swipe: {
+                                            onTouch: true
+                                        }
+                                    });
+                                });
+                                </script>
+                            </li>
+                    <li class="item item4">
+                                <div class="right">
+                                    <div class="prices">
+                                        <span class="new new1"><span class="price">7 700 </span> <span class="rouble">a</span></span>
+                                        <span class="new new2"><span class="price">8 300 </span> <span class="rouble">a</span></span>
+                                        <span class="new new3"><span class="price">9 200 </span> <span class="rouble">a</span></span>
+                
+                                        <span class="old old1">8 450 <span class="rouble">a</span></span>                        
+                                        <span class="old old2">9 150 <span class="rouble">a</span></span>
+                                        <span class="old old3">10 150 <span class="rouble">a</span></span>
+                                    </div>
+                                    <div class="pig pig1">Сэкономь 750 <span class="rouble">a</span></div>
+                                    <div class="pig pig2">Сэкономь 850 <span class="rouble">a</span></div>
+                                    <div class="pig pig3">Сэкономь 950 <span class="rouble">a</span></div>
+                
+                                    <form method="POST" action="send.php" name="order">
+                                        <input type="hidden" name="item" value="Одеяло и подушка TENCEL">
+                                        <input type="hidden" name="price" value="7 700">
+                                        <input type="hidden" name="image" value="img/4.1.png">
+                                        <div class="field">
+                                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div>
+                                        <div class="field">
+                                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div> 
+                                        <p><strong>Выберите подарок:</strong></p>
+                                        
+                                        <div class="gift_inputs">
+                                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                                            <label for="candles">Свечи</label>
+                
+                                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                                            <label for="aroma">Аромапалочки</label>
+                                            
+                                            <input name="gift" type="radio" value="Саше" id="sashe">
+                                            <label for="sashe">Саше</label>
+                                        </div>
+                                        <div class="check">
+                                            <label>
+                                                <input type="checkbox" name="check" id="check">
+                                                <span class="checkbox"></span>
+                                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                                            </label>
+                                        </div>
+                
+                                        <div class="colors">
+                                            <span class="title">Цвет: </span>
+                                            <input name="color" type="radio" value="белый" id="white" checked>
+                                            <label for="white"></label>
+                                        </div>
+                
+                                        <select name="size" id="collection_images4_size">
+                                            <option data="0" value="Выберите размер">Выберите размер</option>
+                                            <option data="1" value="1,5 спальный">1,5 спальный</option>
+                                            <option data="2" value="2 спальный">2 спальный</option>
+                                            <option data="3" value="евро">Евро</option>
+                                        </select>
+                
+                                        <input type="submit" value="Заказать">
+                                    </form> 
+                                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                                </div>
+                                <p class="collection_title">Одеяло и подушка TENCEL</p>
+                                <div class="left_gallery">
+                                    <ul class="collection_images" id="collection_images4">
+                                        <li number="1">
+                                            <img full-size="img/4.1_full.png" src="img/4.1.png" alt="" title="">
+                                        </li>
+                                        <li number="2">
+                                            <img full-size="img/4.2_full.png" src="img/4.2.png" alt="" title="">
+                                        </li>
+                                        <li number="3">
+                                            <img full-size="img/4.3_full.png" src="img/4.3.png" alt="" title="">
+                                        </li>
+                                        <li number="4">
+                                            <img full-size="img/4.4_full.png" src="img/4.4.png" alt="" title="">
+                                        </li>
+                                        <li number="5">
+                                            <img full-size="img/4.5_full.png" src="img/4.5.png" alt="" title="">
+                                        </li>
+                                        <li number="6">
+                                            <img full-size="img/4.6_full.png" src="img/4.6.png" alt="" title="">
+                                        </li>
+                                    </ul>
+                                    <div class="control">
+                                        <a class="gallery_arrow" href="" id="collection_images4_left">&#8592;</a>
+                                        <span><span id="collection_images4_current">1</span>/<span id="collection_images4_count"></span></span>
+                                        <a class="gallery_arrow"  href="" id="collection_images4_right">&#8594;</a>
+                                    </div>
+                                    <a class="full_size" id="collection_images4_full_size" data-fancybox="collection_images4" href="img/4.1_full.png"></a>
+                
+                                    <div class="hotels new"></div>
+                                </div>
+                                <div class="left">
+                                    <div class="table">
+                                        <p class="tr"><span class="td">Ткань чехла</span><span class="td">мако-сатин, 100% хлопок</span></p>
+                                        <p class="tr"><span class="td">Плотность</span><span class="td">200 гр/м2</span></p>
+                                        <p class="tr"><span class="td">Наполнитель</span><span class="td">Tencel/полиэфирное волокно</span></p>
+                                        <p class="tr"><span class="td">Упаковка</span><span class="td">фирменная сумка с ручками, на молнии</span></p>
+                                    </div>
+                                    <div class="desc"><p>Благодаря союзу природы и новейших текстильных технологий был создан уникальный продукт: одеяло и подушка TENCEL — новое поколение комфорта. Комплект обладает натуральной атнибактериальной защитой и поддерживает идеальный уровень влажности. Экологически чистый материал. В силу своей мягкости и гладкости будет комфортен для людей с чувствительной кожей. Является прекрасным подарком на любое торжество.</p></div>
+                                </div>
+                                <script>
+                                $(function() {
+                                    $('#collection_images4').carouFredSel({
+                                        circular: true,
+                                        infinite: true,
+                                        responsive: true,
+                                        height: 410,
+                                        width:750,
+                                        prev: '#collection_images4_left',
+                                        next: '#collection_images4_right',
+                                        scroll: { items: 1,
+                                            onAfter:  function(data){
+                                            $('#collection_images4_full_size').attr('href', $(this).find('img').attr('full-size'));
+                                            $('#collection_images4_current').html($(this).find('li').attr('number'));
+                                            }
+                                        },
+                                        onCreate:  function(data){
+                                            $('#collection_images4_count').html(this.childElementCount);
+                                        },
+                
+                                        auto: false,
+                                        items: {
+                                            visible: {
+                                                min: 1,
+                                                max: 1
+                                            },
+                                            width:750 
+                                        },
+                                        swipe: {
+                                            onTouch: true
+                                        }
+                                    });
+                   
+                                });
+                                </script>
+                            </li>
+                    <li class="item item5">
+                                <div class="right">
+                                    <div class="prices">
+                                        <span class="new new1"><span class="price">2 100 </span> <span class="rouble">a</span></span>
+                
+                                        <span class="old old1">2 430 <span class="rouble">a</span></span> 
+                                    </div>
+                                    <div class="pig pig1">Сэкономь 330 <span class="rouble">a</span></div>
+                
+                                    <form method="POST" action="send.php" name="order">
+                                        <input type="hidden" name="item" value="Детские одело и подушка «Бамбук» Летнее">
+                                        <input type="hidden" name="price" value="2 100">
+                                        <input type="hidden" name="image" value="img/5.1.png">
+                                        <div class="field">
+                                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div>
+                                        <div class="field">
+                                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div> 
+                                        <p><strong>Выберите подарок:</strong></p>
+                                        
+                                        <div class="gift_inputs">
+                                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                                            <label for="candles">Свечи</label>
+                
+                                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                                            <label for="aroma">Аромапалочки</label>
+                                            
+                                            <input name="gift" type="radio" value="Саше" id="sashe">
+                                            <label for="sashe">Саше</label>
+                                        </div>
+                                        <div class="check">
+                                            <label>
+                                                <input type="checkbox" name="check" id="check">
+                                                <span class="checkbox"></span>
+                                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                                            </label>
+                                        </div>
+                
+                                        <div class="colors">
+                                            <span class="title">Цвет: </span>
+                                            <input name="color" type="radio" value="Кремовый" id="white" checked>
+                                            <label for="white"></label>
+                                        </div>
+                
+                                        <select name="size" id="collection_images5_size">
+                                            <option data="0" value="Выберите размер">Выберите размер</option>
+                                            <option data="1" value="одеяло 110х140, подушка 40*60">Одеяло 110х140, подушка 40*60</option>
+                                        </select>
+                
+                                        <input type="submit" value="Заказать">
+                                    </form> 
+                                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                                </div>
+                                <p class="collection_title">Детские одело и подушка «Бамбук» (летнее)</p>
+                                <div class="left_gallery">
+                                    <ul class="collection_images" id="collection_images5">
+                                        <li number="1">
+                                            <img full-size="img/5.1_full.png" src="img/5.1.png" alt="" title="">
+                                        </li>
+                                        <li number="2">
+                                            <img full-size="img/5.2_full.png" src="img/5.2.png" alt="" title="">
+                                        </li>
+                                    </ul>
+                                    <div class="control">
+                                        <a class="gallery_arrow" href="" id="collection_images5_left">&#8592;</a>
+                                        <span><span id="collection_images5_current">1</span>/<span id="collection_images5_count"></span></span>
+                                        <a class="gallery_arrow"  href="" id="collection_images5_right">&#8594;</a>
+                                    </div>
+                                    <a class="full_size" id="collection_images5_full_size" data-fancybox="collection_images5" href="img/5.1_full.png"></a>
+                
+                                    <!--<div class="hotels"></div>-->
+                                </div>
+                                <div class="left">
+                                    <div class="table">
+                                        <p class="tr"><span class="td">Ткань чехла</span><span class="td">тик – 100% хлопок</span></p>
+                                        <p class="tr"><span class="td">Плотность</span><span class="td">300 гр/м2</span></p>
+                                        <p class="tr"><span class="td">Наполнитель</span><span class="td">бамбук/полиэфирное волокно</span></p>
+                                        <p class="tr"><span class="td">Упаковка</span><span class="td">фирменная сумка с ручками, на молнии</span></p>
+                                    </div>
+                                    <div class="desc"><p>Постельные принадлежности из экологически чистого бамбукового волокна в сочетании с чехлом из 100% хлопка - это лучший выбор для обеспечения здорового и комфортного сна малыша. Наполнитель является природным антисептиком, легко впитывает и испаряет влагу и обеспечивает гиппоаллергенность и безопасность.</p></div>
+                                </div>
+                                <script>
+                                $(function() {
+                                    $('#collection_images5').carouFredSel({
+                                        circular: true,
+                                        infinite: true,
+                                        responsive: true,
+                                        height: 410,
+                                        width:750,
+                                        prev: '#collection_images5_left',
+                                        next: '#collection_images5_right',
+                                        scroll: { items: 1,
+                                            onAfter:  function(data){
+                                            $('#collection_images5_full_size').attr('href', $(this).find('img').attr('full-size'));
+                                            $('#collection_images5_current').html($(this).find('li').attr('number'));
+                                            }
+                                        },
+                                        onCreate:  function(data){
+                                            $('#collection_images5_count').html(this.childElementCount);
+                                        },
+                
+                                        auto: false,
+                                        items: {
+                                            visible: {
+                                                min: 1,
+                                                max: 1
+                                            },
+                                            width:750 
+                                        },
+                                        swipe: {
+                                            onTouch: true
+                                        }
+                                    });
+                   
+                                });
+                                </script>
+                            </li>
+                    <li class="item item6">
+                                <div class="right">
+                                    <div class="prices">
+                                        <span class="new new1"><span class="price">5 600 </span> <span class="rouble">a</span></span>
+                                        <span class="new new2"><span class="price">7 650 </span> <span class="rouble">a</span></span>
+                                        <span class="new new3"><span class="price">8 350 </span> <span class="rouble">a</span></span>
+                                        <span class="new new4"><span class="price">9 700 </span> <span class="rouble">a</span></span>
+                
+                                        <span class="old old1">6 200 <span class="rouble">a</span></span> 
+                                        <span class="old old2">8 500 <span class="rouble">a</span></span> 
+                                        <span class="old old3">9 300 <span class="rouble">a</span></span> 
+                                        <span class="old old4">10 600 <span class="rouble">a</span></span> 
+                                    </div>
+                                    <div class="pig pig1">Сэкономь 600 <span class="rouble">a</span></div>
+                                    <div class="pig pig2">Сэкономь 850 <span class="rouble">a</span></div>
+                                    <div class="pig pig3">Сэкономь 950 <span class="rouble">a</span></div>
+                                    <div class="pig pig4">Сэкономь 900 <span class="rouble">a</span></div>
+                
+                                    <form method="POST" action="send.php" name="order">
+                                        <input type="hidden" name="item" value="La Prima Paradiso">
+                                        <input type="hidden" name="price" value="5 600">
+                                        <input type="hidden" name="image" value="img/6.2.png">
+                                        <div class="field">
+                                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div>
+                                        <div class="field">
+                                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                                        </div> 
+                                        <p><strong>Выберите подарок:</strong></p>
+                                        
+                                        <div class="gift_inputs">
+                                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                                            <label for="candles">Свечи</label>
+                
+                                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                                            <label for="aroma">Аромапалочки</label>
+                                            
+                                            <input name="gift" type="radio" value="Саше" id="sashe">
+                                            <label for="sashe">Саше</label>
+                                        </div>
+                                        <div class="check">
+                                            <label>
+                                                <input type="checkbox" name="check" id="check">
+                                                <span class="checkbox"></span>
+                                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                                            </label>
+                                        </div>
+                
+                                        <div class="colors">
+                                            <span class="title">Цвет: </span>
+                                            <input name="color" type="radio" value="принт с цветами" id="flowers" checked>
+                                            <label for="flowers"></label>
+                                        </div>
+                
+                                        <select name="size" id="collection_images6_size">
+                                            <option data="0" value="Выберите размер">Выберите размер</option>
+                                            <option data="1" value="1,5 спальный">1,5 спальный</option>
+                                            <option data="2" value="2 спальный">2 спальный</option>
+                                            <option data="3" value="Евро">Евро</option>
+                                            <option data="4" value="Дуэт">Дуэт</option>
+                                        </select>
+                
+                                        <input type="submit" value="Заказать">
+                                    </form> 
+                                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                                </div>
+                                <p class="collection_title">La Prima Paradiso</p>
+                                <div class="left_gallery">
+                                    <ul class="collection_images" id="collection_images6">
+                                        <li number="1">
+                                            <img full-size="img/6.1_full.png" src="img/6.1.png" alt="" title="">
+                                        </li>
+                                        <li number="2">
+                                            <img full-size="img/6.2_full.png" src="img/6.2.png" alt="" title="">
+                                        </li>
+                                    </ul>
+                                    <div class="control">
+                                        <a class="gallery_arrow" href="" id="collection_images6_left">&#8592;</a>
+                                        <span><span id="collection_images6_current">1</span>/<span id="collection_images6_count"></span></span>
+                                        <a class="gallery_arrow"  href="" id="collection_images6_right">&#8594;</a>
+                                    </div>
+                                    <a class="full_size" id="collection_images6_full_size" data-fancybox="collection_images6" href="img/6.1_full.png"></a>
+                
+                                    <div class="hotels hit"></div>
+                                </div>
+                                <div class="left">
+                                    <div class="table">
+                                        <p class="tr"><span class="td">Материал</span><span class="td">мако-сатин</span></p>
+                                        <p class="tr"><span class="td">Плотность</span><span class="td">300 ТС</span></p>
+                                        <p class="tr"><span class="td">Состав</span><span class="td">100% хлопок</span></p>
+                                        <p class="tr"><span class="td">Дополнительно</span><span class="td">наволочки-трансформеры</span></p>
+                                    </div>
+                                    <div class="desc"><p>Увеличенный размер клапана наволочки позволяет одеть ее на подушку всего за 10 секунд. Благодаря специальным прорезям, вы теперь можете заправить пододеяльник без посторонней помощи в 3 раза быстрее. Постельное белье мягкое, гладкое на ощупь. Прочное и долговечное: не пилингуется, сохраняет яркость и блеск. За ним также легко ухаживать: быстро сохнет и практически не мнется.</p></div>
+                                </div>
+                                <script>
+                                $(function() {
+                                    $('#collection_images6').carouFredSel({
+                                        circular: true,
+                                        infinite: true,
+                                        responsive: true,
+                                        height: 410,
+                                        width:750,
+                                        prev: '#collection_images6_left',
+                                        next: '#collection_images6_right',
+                                        scroll: { items: 1,
+                                            onAfter:  function(data){
+                                            $('#collection_images6_full_size').attr('href', $(this).find('img').attr('full-size'));
+                                            $('#collection_images6_current').html($(this).find('li').attr('number'));
+                                            }
+                                        },
+                                        onCreate:  function(data){
+                                            $('#collection_images6_count').html(this.childElementCount);
+                                        },
+                
+                                        auto: false,
+                                        items: {
+                                            visible: {
+                                                min: 1,
+                                                max: 1
+                                            },
+                                            width:750 
+                                        },
+                                        swipe: {
+                                            onTouch: true
+                                        }
+                                    });
+                    
+                                });
+                                </script>
+                            </li>
+            </ul>
+            <div id="collection-page" class="collection-page"></div>
+    
+            <div class="table pluses">
+                <div class="tr">
+                    <div class="td">
+                        <strong>Оплата наличными или картой</strong>
+                        Мелочь больше не нужна — наши курьеры принимают карты к оплате!
+                    </div>
+                    <div class="td">
+                        <strong>Обмен и возврат без проблем</strong>
+                        Купили и передумали? Не нарушайте целостность упаковки — мы вернем деньги или обменяем покупку!
+                    </div>
+                    <div class="td">
+                        <strong>Бесплатная доставка от 4 990 <span class="rouble">j</span></strong>
+                        От клика до двери в удобное для Вас время!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    $(function() {
+    	$('.collection-ul').carouFredSel({
+    		circular: true,
+    		infinite: true,
+    		responsive: true,
+    		width:1100,
+    		prev: '#collection-left',
+    		next: '#collection-right',
+            pagination: '#collection-page',
+    		scroll: { items: 1
+    		},
+    		auto: false,
+    		items: {
+    			visible: {
+    				min: 1,
+    				max: 1
+    			},
+    			width:1100 
+    		},
+    		swipe: {
+    			onTouch: true
+    		}
+    	});
+    
+        $('select[name="size"]').change(function() {
+            var data = $(this).find(':selected').attr('data');
+            if (data == "0") data = "1";
+            $(this).closest('.item').find('.prices .new').css('display', 'none');                        
+            $(this).closest('.item').find('.prices .new.new' +  data).css('display', 'block');
+            $(this).closest('.item').find('input[name="price"]').val($(this).closest('.item').find('.prices .new.new' +  data + ' .price').html());
+    
+            $(this).closest('.item').find('.prices .old').css('display', 'none');                        
+            $(this).closest('.item').find('.prices .old.old' +  data).css('display', 'block');
+    
+            $(this).closest('.item').find('.pig').css('display', 'none');                        
+            $(this).closest('.item').find('.pig.pig' +  data).css('display', 'block');
+        });
+    
+        $('select').styler();
+        var deviceAgent = navigator.userAgent.toLowerCase();
+        var iOS = deviceAgent.match(/(iphone|ipod|ipad)/);
+        if (!iOS) {
+            $('section.collection ul li.item form select').css('display', 'none');
+        } else {
+            $('section.collection ul li.item form .jq-selectbox__select').css('display', 'none');
+        }
+    });
+    
+    </script>
+
+    <section class="guarantees">
+        <div class="wrapper">
+            <p class="title">Вы получаете сразу три гарантии!</p>
+            <ul>
+                <li>
+                    <span class="title">Гарантия низкой цены</span>
+                    <p>Мы устанавливаем низкую цену<br>за счёт разницы в технологиях<br>производства материалов, сам товар<br>гарантированно будет сделан на высшем уровне</p>
+                </li>
+                <li>
+                    <span class="title">Гарантия качества</span>
+                    <p>Мы уверены в качестве товара,<br>т.к. сами подбираем ткани<br>и тестируем комплекты</p>
+                </li>
+                <li>
+                    <span class="title">Гарантия бережной доставки</span>
+                    <p>Гарантируем, что Ваш комплект прибудет<br>в целости и сохранности, иначе мы<br>заменим его за свой счёт</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slider">
+        <div class="wrapper">
+            <p class="title">Ваша спальня будет выглядеть изысканно<span>с выбранным комплектом — убедитесь в этом </span></p>
+            <div class="slider-control">
+                <a class="arrow arrow_left" href="" id="slider-left"></a>
+                <a class="arrow arrow_right" href="" id="slider-right"></a>
+            </div>
+            <ul class="slider-ul">
+                <li><img src="img/slider1.png" alt="" title=""></li>
+                <li><img src="img/slider2.png" alt="" title=""></li>
+                <li><img src="img/slider3.png" alt="" title=""></li>
+                <li><img src="img/slider4.png" alt="" title=""></li>
+                <li><img src="img/slider5.png" alt="" title=""></li>
+                <li><img src="img/slider6.png" alt="" title=""></li>
+            </ul>
+            <div id="slider-page" class="slider-page"></div>
+        </div>
+    </section>
+    
+    <script>
+    $(function() {
+    	$('.slider-ul').carouFredSel({
+    		circular: true,
+    		infinite: true,
+    		responsive: true,
+    		prev: '#slider-left',
+    		next: '#slider-right',
+            pagination: '#slider-page',
+    		scroll: { items: 1
+    		},
+    		auto: false,
+    		items: {
+    			visible: {
+    				min: 1,
+    				max: 1
+    			}, 
+    		},
+    		swipe: {
+    			onTouch: true
+    		}
+    	});
+    });
+    </script>
+
+    <section class="mention">
+        <div class="wrapper">
+            <p class="title">Что говорят основатели «Культа сна»</p>
+        </div>
+        <div class="content">
+            <div class="wrapper">
+                <ul>
+                    <li>Индивидуальная разработка итальянских и немецких дизайнеров.</li>
+                    <li>Для того, чтобы сохранить низкую стоимость на элитные комплекты, постельное бельё производится в России на проверенных швейных фабриках.</li>
+                    <li>Мы лично отбираем лучшие ткани.</li>
+                    <li>Вы можете выбрать цвет и размер любого элемента комплекта.</li>
+                </ul>
+                <div class="quote">
+                    <p>«Культ Сна» — это семейная компания с прекрасным коллективом людей, любящих своё дело и продукт, с которым работают. Ни для никого не секрет, что наши коллеги и сотрудники, и мы сами пользуемся постельным бельем, которое предлагаем Вам — настолько уверены в его качестве!</p> 
+                    <p>Постоянные и новые покупатели становятся членами нашей большой семьи. Приобретая комплект постельного белья для себя, многие возвращаются, чтобы выбрать подарок для близких или друзей — нам очень приятно, ведь это самый главный показатель нашей работы и трепетного отношения к делу.</p>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="wrapper">
+            <div class="reviews_control">
+                <a class="reviews_arrow" href="" id="review-left"></a>
+                <a class="reviews_arrow" href="" id="review-right"></a>
+            </div>
+            <ul class="reviews-ul">
+                <li>
+                    <p class="title">Счастливые обладатели<br>стильных комплектов</p>
+                    <div class="review">
+                        <img src="img/dmitri.jpg">
+                        <div class="review_right"> 
+                            <p class="name">Дмитрий Олейников</p>
+                            <p class="text">Выражаем благодарность компании "Культ Сна" (г. Санкт-Петербург), <a href="https://www.kultsna.ru/">https://www.kultsna.ru/</a>, <a href="https://vk.com/kultsna">https://vk.com/kultsna</a>, за предоставленные одеяла, постельное бельё, полотенца, людям попавшим в трудную жизненную ситуацию, находящимся в социальном приюте, над котором наш фонд "Планета Добра" взял опеку. А также благодарим за детские развивающие игрушки. Спасибо, что Вы не остались равнодушны к нашему призыву о помощи!</p>
+                            <p class="date">14 преля 2017, 11:15</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="review">
+                        <img src="img/anna.jpg">
+                        <div class="review_right"> 
+                            <p class="name">Анна</p>
+                            <p class="text">Заказала маме в подарок на день рождения комплект La Prima Эдем. Таких обалденных отзывов о постельном белье я еще не слышала. Мама очень рада, спасибо за сервис и качество.</p>
+                            <p class="date">17 апреля 2017, 18:34</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="review">
+                        <img src="img/pavel.jpg">
+                        <div class="review_right"> 
+                            <p class="name">Павел Корсун</p>
+                            <p class="text">Сидя в интернете, случайно наткнулся на рекламу постельного белья. Зайдя на сайт, приятно удивила цветовая гамма комплектов. Это меня очень обрадовало, т.к. я долго искал именно такой цвет (розовая дымка — любимый цвет моей женщины). Среди огромного количества предложений в интернете этот цвет очень редкий, а качество вообще порадовало меня. Самое главное, что хотелось бы сказать от себя, моя женщина очень довольна качеством и красотой этого постельного белья и наш сон очень крепкий))</p>
+                            <p class="date">26 апреля 2017, 11:47</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="review">
+                        <img src="img/marina.jpg">
+                        <div class="review_right"> 
+                            <p class="name">Марина Сербулева</p>
+                            <p class="text">Обожаю постельное белье в отелях. Именно такое я нашла на этом сайте и купила сразу два комплекта в разных цветах. С доставкой удивили, конечно! Быстро привезли, приехали с терминалом, что важно. Кайфую уже третий день, спасибо!!</p>
+                            <p class="date">8 мая 2017, 17:14</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <a class="review_link" href="#review">Оставить отзыв</a>
+                    <form name="review" class="review_form" action="/send.php" method="POST">
+                        <p>Вы уже стали нашим клиентом? Поделитесь впечатлением:</p>
+                        <div class="left">
+                            <div class="field">
+                                <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                            </div> 
+                            <div class="field">
+                                <label class="file">
+                                    <input type="file" name="file">
+                                    <span>Добавить фото</span>
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="field for_textarea">
+                            <textarea name="comment" placeholder="Ваш отзыв"></textarea><span class="error">Пожалуйста, заполните поле</span>
+                            <div class="check">
+                                <label>
+                                    <input type="checkbox" name="check" id="check">
+                                    <span class="checkbox"></span>
+                                    <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <input type="submit" value="Отправить">
+                    </form>
+                </li>
+                <li>
+                    <p class="title">Счастливые обладатели<br>стильных комплектов</p>
+                    <div class="review">
+                        <img src="img/alena.jpg">
+                        <div class="review_right"> 
+                            <p class="name">Алена Лемешева</p>
+                            <p class="text">Культ Сна — это маленький рай для любителей качественного и нежного постельного белья, я фанат уже несколько лет. Готова бесконечно благодарить, потому что ни в одной Икее вы не найдете такого качества. Низкий поклон, жду новинок.</p>
+                            <p class="date">15 мая 2017, 19:25</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="review">
+                        <img src="img/victori.jpg">
+                        <div class="review_right"> 
+                            <p class="name">Виктория Щепихина</p>
+                            <p class="text">Для всей своей семьи выбираю постельное белье только тут. Недавно заказала комплект для бабушки на день рождения, сама приехать не смогла к ней, доставили в Самарскую область и успели к 26 апреля. Спасибо!</p>
+                            <p class="date">19 мая 2017, 09:57</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="review">
+                        <img src="img/kris.jpg">
+                        <div class="review_right"> 
+                            <p class="name">Кристина</p>
+                            <p class="text">С Культом Сна мы дружим уже очень-очень давно, наверное с момента основания. Все постельное белье прошло проверку на прочность и качество лично от меня, т.к. стирать приходилось почти каждый день, дома на тот момент были совсем маленькие дети, сами понимаете. Доверяю этому магазину всецело.</p>
+                            <p class="date">26 мая 2017, 19:01</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <a class="review_link" href="#review">Оставить отзыв</a>
+                    <form name="review" class="review_form" action="/send.php" method="POST">
+                        <p>Вы уже стали нашим клиентом? Поделитесь впечатлением:</p>
+                        <div class="left">
+                            <div class="field">
+                                <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                            </div>  
+                        </div>
+                        <div class="field for_textarea">
+                            <textarea name="comment" placeholder="Ваш отзыв"></textarea><span class="error">Пожалуйста, заполните поле</span>
+                            <div class="check">
+                                <label>
+                                    <input type="checkbox" name="check" id="check">
+                                    <span class="checkbox"></span>
+                                    <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                                </label>
+                            </div>
+                        </div>
+                        <input type="submit" value="Отправить">
+                    </form>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+    $(function() {
+    	$('.reviews-ul').carouFredSel({
+    		circular: true,
+    		infinite: true,
+    		width:950,
+    		prev: '#review-left',
+    		next: '#review-right',
+    		scroll: { items: 1,
+                onBefore:  function(data){
+                    $('.review_form').css('display', 'none');
+                    $('.review_link').css('display', '');             
+                    $('.reviews-ul').trigger('updateSizes');                
+                    $('.reviews_control').css('bottom', '');
+                }
+    		},
+    		auto: false,
+    		items: {
+    			visible: {
+    				min: 1,
+    				max: 1
+    			},
+    			width:950 
+    		},
+    		swipe: {
+    			onTouch: false
+    		}
+    	});
+    
+        $('.review_link').click(function(e) {
+            e.preventDefault();
+            $('.reviews_control').css('bottom', '330px');
+            $(this).css('display', 'none');
+            $(this).siblings('form').css('display','block');
+            $('.reviews-ul').trigger('updateSizes');
+        });
+    });
+    
+    
+    
+    </script>
+    
+    <section class="catalog">
+        <div class="wrapper">
+            <form method="POST" action="/send.php" name="catalog">
+                <p>Оставьте заявку – и получите полный каталог комплектов<br>со скидками <span>до 40%</span></p>
+                <div class="field">
+                    <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                </div>
+                <div class="field">
+                    <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                </div>  
+                <div class="field">        
+                    <input type="text" name="email" class="email" placeholder="Электронная почта"><span class="error">Пожалуйста, заполните поле</span>
+                </div>
+                <div class="check">
+                    <label>
+                        <input type="checkbox" name="check" id="check">
+                        <span class="checkbox"></span>
+                        <span class="checkbox_text">Я согласен на обработку персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                    </label>
+                </div>
+                <input type="submit" value="Получить каталог!">
+            </form>
+        </div>
+    </section>
+    
+    <section class="map">
+        <p class="title">Потрогайте бельё своими руками!
+            <span>Приглашаем вас в наши магазины:</span>
+        </p>
+        <div class="wrapper"></div>
+        <div id="map"></div>
+    
+    </section>
+    
+    <script type="text/javascript">
+    // Группы объектов
+    var groups = [
+            {
+                center: [59.924037, 30.310667],
+                name: "ул. Садовая, 51",
+                desc: "",
+                phone: "8 (921) 631-95-13"
+            },
+            {
+                center: [59.959516, 30.289556],
+                name: "Чкаловский пр., 7",
+                desc: "ТЦ Чкаловский, 1 этаж",
+                phone: "8 (921) 631-95-08"
+            },
+            {
+                center: [59.926977, 30.353867],
+                name: "Кузнечный переулок, 15",
+                desc: "ТЦ Чкаловский, 1 этаж",
+                phone: "8 (921) 631-95-39"
+            },
+            {
+                center: [59.930228, 30.354343],
+                name: "ул. Марата, 5",
+                desc: "ТЦ Олимпик Плаза, 1 этаж",
+                phone: "8 (921) 631-95-18"
+            },
+            {
+                center: [59.855715, 30.224384],
+                name: "ул. Маршала Жукова, 35",
+                desc: "ТЦ Юго-Западный, 1 этаж, справа",
+                phone: "8 (921) 631-95-14"
+            },
+            {
+                center: [59.916609, 29.770699],
+                name: "г. Ломоносов, ул. Кронштадская, 1",
+                desc: "ТРК Меншиков холл, 2 этаж",
+                phone: "8 (931) 236-47-54"
+            }
+        ];
+    
+    
+    
+    ymaps.ready(init);
+    
+    function init() {
+    
+        // Создание экземпляра карты.
+        var myMap = new ymaps.Map('map', {
+                center: [59.930480, 30.315181],
+                zoom: 14, 
+                controls:[]
+            }),
+            // Контейнер для меню.
+            menu = $('<ul class="map_menu"></ul>');
+            
+        for (var i = 0, l = groups.length; i < l; i++) {
+            createMenuGroup(groups[i], i);
+        }
+    
+        function createMenuGroup (group,i) {
+    
+            var placemark = new ymaps.Placemark(group.center, { },
+            {
+                iconLayout: 'default#image',            
+                iconImageHref: 'img/ymarker.png',
+                iconImageSize: [42, 64],
+                iconImageOffset: [-21, -64],
+            });
+    
+            myMap.geoObjects.add(placemark);
+    
+            placemark.events.add('click', function () {
+                myMap.geoObjects.each(function (geoObject) {           
+                    geoObject.options.set({
+                        iconImageHref: 'img/ymarker.png'
+                    });                   
+                });
+                menuItem.siblings('li').removeClass('active');
+                menuItem.addClass('active');
+                placemark.options.set({
+                    iconImageHref: 'img/ymarker_active.png'
+                });
+            });        
+            
+            var menuItem = $('<li><a href="#"><p class="name"><span>'+ group.name + '</span></p><p class="desc">' + group.desc + '</p><p class="desc">' + group.phone + '</p></a></li>');
+            menuItem
+                .appendTo(menu)
+                // При клике по пункту подменю открываем/закрываем баллун у метки.
+                .find('a')
+                .bind('click', function () {
+                    myMap.geoObjects.each(function (geoObject) {           
+                        geoObject.options.set({
+                            iconImageHref: 'img/ymarker.png'
+                        });                   
+                    })
+                    $(this).closest('ul').find('li').removeClass('active');
+                    $(this).closest('li').addClass('active');
+                     myMap.panTo(
+                        // Координаты нового центра карты
+                        group.center, {
+                            flying: true,
+                            zoom:10
+                        }
+                    );
+    
+                    placemark.options.set({
+                        iconImageHref: 'img/ymarker_active.png'
+                    });
+                    return false;
+                });
+        }
+    
+        menu.appendTo($('.map .wrapper'));
+        // Выставляем масштаб карты чтобы были видны все группы.
+        myMap.setBounds(myMap.geoObjects.getBounds());
+    }
+    </script>
+
+    <section class="form">
+        <div class="wrapper">
+            <form name="bottom_form" action="/send.php" method="POST">
+                <p>Остались вопросы? Задайте их нам!<span>Менеджер свяжется с Вами в ближайшее время</span></p>
+                <div class="left">
+                    <div class="field">
+                        <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                    </div>  
+                </div>
+                <div class="field for_textarea">
+                    <textarea name="comment" placeholder="Вопрос"></textarea><span class="error">Пожалуйста, заполните поле</span>
+                </div>
+                <div class="check">
+                    <label>
+                        <input type="checkbox" name="check" id="check">
+                        <span class="checkbox"></span>
+                        <span class="checkbox_text">Я согласен на обработку персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                    </label>
+                </div>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="wrapper">
+            <img src="img/logo.png" alt="" title="">
+            <div class="contacts">
+                <p class="tit">Свяжитесь с нами прямо сейчас</p>
+                <p class="part">По телефону:<br>+7 (812) 449-75-14<br>+7 (921) 631-95-51</p>
+                <p class="part">По электронной почте:<br>info@kultsna.ru</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup_background"></div>
+    <div class="popup_window callback" id="callback">
+        <a href="" class="popup_close"></a>
+        <div class="logo"></div>
+        <p class="title">Мы с удовольствием перезвоним<br>
+    Вам прямо сейчас, просто оставьте номер:</p>
+        <form name="callback" method="POST" action="/send.php">
+            <div class="field">
+                <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+            </div>
+            <div class="check">
+                <label>
+                    <input type="checkbox" name="check" id="check">
+                    <span class="checkbox"></span>
+                    <span class="checkbox_text">Я согласен на обработку персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                </label>
+            </div>
+            <input type="submit" value="Позвоните мне">
+        </form>
+    </div>
+    <!--
+    <div class="popup_window callback" id="order">
+        <a href="" class="popup_close"></a>
+        <div class="logo"></div>
+        <p class="title">Мы с удовольствием перезвоним<br>
+    Вам прямо сейчас, просто оставьте номер:</p>
+        <form name="order_main" method="POST" action="/send.php">
+            <div class="field">
+                <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+            </div>
+            <input type="submit" value="Позвоните мне">
+        </form>
+    </div>-->
+    
+    <div class="popup_window callback" id="success_callback">
+        <a href="" class="popup_close"></a>
+        <div class="logo"></div>
+        <p class="title">Спасибо!<br><br>Наш внимательный менеджер свяжется с Вами<br>в ближайшее время и подробно проконсультирует</p>
+    </div>
+    
+    <div class="popup_window success_order" id="success_order">
+        <a href="" class="popup_close"></a>
+        <div class="logo"></div>
+        <p class="big_title"><span id="name"></span>, благодарим Вас за оформление заказа!</p>
+        <img src="img/success_gift.png">
+        <p class="title">Ваш подарок - <span id="gift"></span></p>
+        <img src="img/success_phone.png">
+        
+        <p class="title">Наш внимательный менеджер свяжется<br>с Вами в ближайшее время для уточнения деталей заказа</p>
+    
+        <img id="image">
+        <p class="title price"><span id="item"></span><span class="rouble">o</span><span id="price"></span></p>
+    </div>
+    
+    
+    <div class="popup_window success_catalog" id="success_catalog">
+        <a href="" class="popup_close"></a>
+        <div class="logo"></div>
+        <p class="title">Спасибо!<br>Загляните на почту, каталог с лучшими предложениями<br>по специальным ценам уже ждет Вас</p>
+    </div>
+    
+    <div class="popup_window success_review" id="success_review">
+        <a href="" class="popup_close"></a>
+        <div class="logo"></div><p></p>
+        <p class="title">Спасибо за отзыв! Нам очень важно Ваше мнение!</p>
+    </div>
+    
+    <div class="popup_window success" id="success">
+        <a href="" class="popup_close"></a>
+        <div class="logo"></div>
+        <p class="title">Спасибо!<br>Наш внимательный менеджер перезвонит Вам<br>и ответит на все интересующие Вас вопросы</p>
+    </div>
+
+<section class="ideamarketing">
+    <div class="wrapper">
+        <span>Разработка:</span> <img src="img/ideamarketing.png">
+    </div>
+</section>
+<script src="js/app.js"></script>
+<script src="js/popups.js"></script>
+<script src="js/send_ajax.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+    <li class="item item5">
+                <div class="right">
+                    <div class="prices">
+                        <span class="new new1"><span class="price">2 100 </span> <span class="rouble">a</span></span>
+
+                        <span class="old old1">2 430 <span class="rouble">a</span></span> 
+                    </div>
+                    <div class="pig pig1">Сэкономь 330 <span class="rouble">a</span></div>
+
+                    <form method="POST" action="send.php" name="order">
+                        <input type="hidden" name="item" value="Детские одело и подушка «Бамбук» Летнее">
+                        <input type="hidden" name="price" value="2 100">
+                        <input type="hidden" name="image" value="img/5.1.png">
+                        <div class="field">
+                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                        </div> 
+                        <p><strong>Выберите подарок:</strong></p>
+                        
+                        <div class="gift_inputs">
+                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                            <label for="candles">Свечи</label>
+
+                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                            <label for="aroma">Аромапалочки</label>
+                            
+                            <input name="gift" type="radio" value="Саше" id="sashe">
+                            <label for="sashe">Саше</label>
+                        </div>
+                        <div class="check">
+                            <label>
+                                <input type="checkbox" name="check" id="check">
+                                <span class="checkbox"></span>
+                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                            </label>
+                        </div>
+
+                        <div class="colors">
+                            <span class="title">Цвет: </span>
+                            <input name="color" type="radio" value="Кремовый" id="white" checked>
+                            <label for="white"></label>
+                        </div>
+
+                        <select name="size" id="collection_images5_size">
+                            <option data="0" value="Выберите размер">Выберите размер</option>
+                            <option data="1" value="одеяло 110х140, подушка 40*60">Одеяло 110х140, подушка 40*60</option>
+                        </select>
+
+                        <input type="submit" value="Заказать">
+                    </form> 
+                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                </div>
+                <p class="collection_title">Детские одело и подушка «Бамбук» (летнее)</p>
+                <div class="left_gallery">
+                    <ul class="collection_images" id="collection_images5">
+                        <li number="1">
+                            <img full-size="img/5.1_full.png" src="img/5.1.png" alt="" title="">
+                        </li>
+                        <li number="2">
+                            <img full-size="img/5.2_full.png" src="img/5.2.png" alt="" title="">
+                        </li>
+                    </ul>
+                    <div class="control">
+                        <a class="gallery_arrow" href="" id="collection_images5_left">&#8592;</a>
+                        <span><span id="collection_images5_current">1</span>/<span id="collection_images5_count"></span></span>
+                        <a class="gallery_arrow"  href="" id="collection_images5_right">&#8594;</a>
+                    </div>
+                    <a class="full_size" id="collection_images5_full_size" data-fancybox="collection_images5" href="img/5.1_full.png"></a>
+
+                    <!--<div class="hotels"></div>-->
+                </div>
+                <div class="left">
+                    <div class="table">
+                        <p class="tr"><span class="td">Ткань чехла</span><span class="td">тик – 100% хлопок</span></p>
+                        <p class="tr"><span class="td">Плотность</span><span class="td">300 гр/м2</span></p>
+                        <p class="tr"><span class="td">Наполнитель</span><span class="td">бамбук/полиэфирное волокно</span></p>
+                        <p class="tr"><span class="td">Упаковка</span><span class="td">фирменная сумка с ручками, на молнии</span></p>
+                    </div>
+                    <div class="desc"><p>Постельные принадлежности из экологически чистого бамбукового волокна в сочетании с чехлом из 100% хлопка - это лучший выбор для обеспечения здорового и комфортного сна малыша. Наполнитель является природным антисептиком, легко впитывает и испаряет влагу и обеспечивает гиппоаллергенность и безопасность.</p></div>
+                </div>
+                <script>
+                $(function() {
+                    $('#collection_images5').carouFredSel({
+                        circular: true,
+                        infinite: true,
+                        responsive: true,
+                        height: 410,
+                        width:750,
+                        prev: '#collection_images5_left',
+                        next: '#collection_images5_right',
+                        scroll: { items: 1,
+                            onAfter:  function(data){
+                            $('#collection_images5_full_size').attr('href', $(this).find('img').attr('full-size'));
+                            $('#collection_images5_current').html($(this).find('li').attr('number'));
+                            }
+                        },
+                        onCreate:  function(data){
+                            $('#collection_images5_count').html(this.childElementCount);
+                        },
+
+                        auto: false,
+                        items: {
+                            visible: {
+                                min: 1,
+                                max: 1
+                            },
+                            width:750 
+                        },
+                        swipe: {
+                            onTouch: true
+                        }
+                    });
+   
+                });
+                </script>
+            </li>

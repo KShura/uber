@@ -1,0 +1,231 @@
+    <li class="item">
+                <div class="right">
+                    <div class="prices">
+                        <span class="new new1"><span class="price">3 950 </span> <span class="rouble">a</span></span>
+                        <span class="new new2"><span class="price">5 100 </span> <span class="rouble">a</span></span>
+                        <span class="new new3"><span class="price">5 600 </span> <span class="rouble">a</span></span>
+
+                        <span class="old old1">4 380 <span class="rouble">a</span></span>                        
+                        <span class="old old2">5 700 <span class="rouble">a</span></span>
+                        <span class="old old3">6 200 <span class="rouble">a</span></span>
+                    </div>
+                    <div class="pig pig1">Сэкономь 430 <span class="rouble">a</span></div>
+                    <div class="pig pig2">Сэкономь 600 <span class="rouble">a</span></div>
+                    <div class="pig pig3">Сэкономь 600 <span class="rouble">a</span></div>
+
+                    <form method="POST" action="send.php" name="order">
+                        <input type="hidden" name="item" value="La Prima Формула комфорта">
+                        <input type="hidden" name="price" value="3 950">
+                        <input type="hidden" name="image" value="img/1.1.png">
+                        <div class="field">
+                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                        </div>
+                        <p><strong>Выберите подарок:</strong></p>
+                        
+                        <div class="gift_inputs">
+                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                            <label for="candles">Свечи</label>
+
+                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                            <label for="aroma">Аромапалочки</label>
+                            
+                            <input name="gift" type="radio" value="Саше" id="sashe">
+                            <label for="sashe">Саше</label>
+                        </div>
+                        <div class="check">
+                            <label>
+                                <input type="checkbox" name="check" id="check">
+                                <span class="checkbox"></span>
+                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                            </label>
+                        </div>
+
+                        <div class="colors many_colors">                            
+                            <a href="" class="colors_arrow" id="colors-left">&#8592;</a>
+                            <a href="" class="colors_arrow" id="colors-right">&#8594;</a>
+                            <span class="title">Цвет: </span>
+                            <div class="wrap">
+                                <ul class="colors-ul">
+                                    <li>
+                                        <input name="color" type="radio" value="Кофе полосы" id="coffee_stripes" checked>
+                                        <label for="coffee_stripes"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Кофе пейсли" id="coffee_peisly">
+                                        <label for="coffee_peisly"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Белый пейсли" id="white_peisly">
+                                        <label for="white_peisly"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Ваниль пейсли" id="vanilla_peisly">
+                                        <label for="vanilla_peisly"></label>
+                                    </li>
+                                    
+                                    <li>
+                                        <input name="color" type="radio" value="Ваниль полосы" id="vanilla_stripes">
+                                        <label for="vanilla_stripes"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Морская пейсли" id="sea_peisly">
+                                        <label for="sea_peisly"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Морская полосы" id="sea_stripes">
+                                        <label for="sea_stripes"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Роза пейсли" id="rose_peisly">
+                                        <label for="rose_peisly"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Роза полосы" id="rose_stripes">
+                                        <label for="rose_stripes"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Серебрянная пейсли" id="silver_peisly">
+                                        <label for="silver_peisly"></label>
+                                    </li>
+                                    <li>
+                                        <input name="color" type="radio" value="Серебрянная полосы" id="silver_stripes">
+                                        <label for="silver_stripes"></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <script>
+                        $(function() {
+                            $('.colors-ul').carouFredSel({
+                                circular: true,
+                                infinite: true,
+                                responsive: false,
+                                width:350,
+                                prev: '#colors-left',
+                                next: '#colors-right',
+                                scroll: { items: 1
+                                },
+                                auto: false,
+                                items: {
+                                    visible: {
+                                        min: 7,
+                                        max: 7
+                                    },
+                                },
+                                swipe: {
+                                    onTouch: false
+                                }
+                            }
+                            
+                            );
+                        });
+                        </script>
+                        <select name="size" id="collection_images1_size">
+                            <option data="0" value="Выберите размер">Выберите размер</option>
+                            <option data="1" value="1,5 спальный">1,5 спальный</option>
+                            <option data="2" value="2 спальный">2 спальный</option>
+                            <option data="3" value="Дуэт">Дуэт</option>
+                        </select>
+
+                        <input type="submit" value="Заказать">
+                    </form> 
+                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                </div>
+                <p class="collection_title">La Prima «Формула комфорта»</p>
+                <div class="left_gallery">
+                    <ul class="collection_images" id="collection_images1">
+                        <li number="1" class="coffee_stripes">
+                            <img full-size="img/1.1_full.png" src="img/1.1.png" alt="" title="">
+                        </li>
+                        <li number="2" class="coffee_peisly">
+                            <img full-size="img/1.2_full.png" src="img/1.2.png" alt="" title="">
+                        </li>
+                        <li number="3" class="white_peisly">
+                            <img full-size="img/1.3_full.png" src="img/1.3.png" alt="" title="">
+                        </li>
+                        <li number="4" class="vanilla_peisly">
+                            <img full-size="img/1.4_full.png" src="img/1.4.png" alt="" title="">
+                        </li>
+                        <li number="5" class="vanilla_stripes">
+                            <img full-size="img/1.5_full.png" src="img/1.5.png" alt="" title="">
+                        </li>
+                        <li number="6" class="sea_peisly">
+                            <img full-size="img/1.6_full.png" src="img/1.6.png" alt="" title="">
+                        </li>
+                        <li number="7" class="sea_stripes">
+                            <img full-size="img/1.7_full.png" src="img/1.7.png" alt="" title="">
+                        </li>
+                        <li number="8" class="rose_peisly">
+                            <img full-size="img/1.8_full.png" src="img/1.8.png" alt="" title="">
+                        </li>
+                        <li number="9" class="rose_stripes">
+                            <img full-size="img/1.9_full.png" src="img/1.9.png" alt="" title="">
+                        </li>
+                        <li number="10" class="silver_peisly">
+                            <img full-size="img/1.11_full.png" src="img/1.11.png" alt="" title="">
+                        </li>
+                        <li number="11" class="silver_stripes">
+                            <img full-size="img/1.10_full.png" src="img/1.10.png" alt="" title="">
+                        </li>
+                    </ul>
+                    <div class="control">
+                        <a class="gallery_arrow" href="" id="collection_images1_left">&#8592;</a>
+                        <span><span id="collection_images1_current">1</span>/<span id="collection_images1_count"></span></span>
+                        <a class="gallery_arrow"  href="" id="collection_images1_right">&#8594;</a>
+                    </div>
+                    <a class="full_size" id="collection_images1_full_size" data-fancybox="collection_images1" href="img/1.1_full.png"></a>
+
+                    <div class="hotels"></div>
+                </div>
+                <div class="left">
+                    <div class="table">
+                        <p class="tr"><span class="td">Материал</span><span class="td">страйп-сатин</span></p>
+                        <p class="tr"><span class="td">Плотность</span><span class="td">220 ТС</span></p>
+                        <p class="tr"><span class="td">Состав</span><span class="td">100% хлопок</span></p>
+                        <p class="tr"><span class="td">Дополнительно</span><span class="td">простыня на резинке</span></p>
+                    </div>
+                    <div class="desc"><p>Коллекция «Формула комфорта» выполнена в великолепной цветовой палитре, которая сочетает в себе лаконичный и в то же время элегантный дизайн. Такое постельное белье вы можете встретить в лучших отелях мира и стильных интерьерах ведущих мировых дизайнеров. Вы можете собрать комплект из любых цветов.</p></div>
+                </div>
+                <script>
+                $(function() {
+                    $('#collection_images1').carouFredSel({
+                        circular: true,
+                        infinite: true,
+                        responsive: true,
+                        height: 410,
+                        width:750,
+                        prev: '#collection_images1_left',
+                        next: '#collection_images1_right',
+                        scroll: { items: 1,
+                            onAfter:  function(data){
+                            $('#collection_images1_full_size').attr('href', $(this).find('img').attr('full-size'));
+                            $('#collection_images1_current').html($(this).find('li').attr('number'));
+                            }
+                        },
+                        onCreate:  function(data){
+                            $('#collection_images1_count').html(this.childElementCount);
+                        },
+
+                        auto: false,
+                        items: {
+                            visible: {
+                                min: 1,
+                                max: 1
+                            },
+                            width:750 
+                        },
+                        swipe: {
+                            onTouch: true
+                        }
+                    });
+
+                    $('.many_colors input[name="color"]').change(function() {
+                        var index = $('#collection_images1 li.' + $(this).attr('id')).attr('number');
+                        $('#collection_images1').trigger('slideTo', index-1);
+                    });
+                 });
+                </script>
+            </li>

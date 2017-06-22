@@ -1,0 +1,22 @@
+{
+  "name": "kult-sna",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "sergnek <sergnek94@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}

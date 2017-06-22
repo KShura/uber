@@ -1,0 +1,72 @@
+<div class="popup_background"></div>
+<div class="popup_window callback" id="callback">
+    <a href="" class="popup_close"></a>
+    <div class="logo"></div>
+    <p class="title">Мы с удовольствием перезвоним<br>
+Вам прямо сейчас, просто оставьте номер:</p>
+    <form name="callback" method="POST" action="/send.php">
+        <div class="field">
+            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+        </div>
+        <div class="check">
+            <label>
+                <input type="checkbox" name="check" id="check">
+                <span class="checkbox"></span>
+                <span class="checkbox_text">Я согласен на обработку персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+            </label>
+        </div>
+        <input type="submit" value="Позвоните мне">
+    </form>
+</div>
+<!--
+<div class="popup_window callback" id="order">
+    <a href="" class="popup_close"></a>
+    <div class="logo"></div>
+    <p class="title">Мы с удовольствием перезвоним<br>
+Вам прямо сейчас, просто оставьте номер:</p>
+    <form name="order_main" method="POST" action="/send.php">
+        <div class="field">
+            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+        </div>
+        <input type="submit" value="Позвоните мне">
+    </form>
+</div>-->
+
+<div class="popup_window callback" id="success_callback">
+    <a href="" class="popup_close"></a>
+    <div class="logo"></div>
+    <p class="title">Спасибо!<br><br>Наш внимательный менеджер свяжется с Вами<br>в ближайшее время и подробно проконсультирует</p>
+</div>
+
+<div class="popup_window success_order" id="success_order">
+    <a href="" class="popup_close"></a>
+    <div class="logo"></div>
+    <p class="big_title"><span id="name"></span>, благодарим Вас за оформление заказа!</p>
+    <img src="img/success_gift.png">
+    <p class="title">Ваш подарок - <span id="gift"></span></p>
+    <img src="img/success_phone.png">
+    
+    <p class="title">Наш внимательный менеджер свяжется<br>с Вами в ближайшее время для уточнения деталей заказа</p>
+
+    <img id="image">
+    <p class="title price"><span id="item"></span><span class="rouble">o</span><span id="price"></span></p>
+</div>
+
+
+<div class="popup_window success_catalog" id="success_catalog">
+    <a href="" class="popup_close"></a>
+    <div class="logo"></div>
+    <p class="title">Спасибо!<br>Загляните на почту, каталог с лучшими предложениями<br>по специальным ценам уже ждет Вас</p>
+</div>
+
+<div class="popup_window success_review" id="success_review">
+    <a href="" class="popup_close"></a>
+    <div class="logo"></div><p></p>
+    <p class="title">Спасибо за отзыв! Нам очень важно Ваше мнение!</p>
+</div>
+
+<div class="popup_window success" id="success">
+    <a href="" class="popup_close"></a>
+    <div class="logo"></div>
+    <p class="title">Спасибо!<br>Наш внимательный менеджер перезвонит Вам<br>и ответит на все интересующие Вас вопросы</p>
+</div>

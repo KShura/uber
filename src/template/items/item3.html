@@ -1,0 +1,138 @@
+    <li class="item">
+                <div class="right">
+                    <div class="prices">
+                        <span class="new new1"><span class="price">5 200 </span> <span class="rouble">a</span></span>
+                        <span class="new new2"><span class="price">6 800 </span> <span class="rouble">a</span></span>
+                        <span class="new new3"><span class="price">7 500 </span> <span class="rouble">a</span></span>
+                        <span class="new new4"><span class="price">8 900 </span> <span class="rouble">a</span></span>
+
+                        <span class="old old1">5 990 <span class="rouble">a</span></span>                        
+                        <span class="old old2">7 500 <span class="rouble">a</span></span>
+                        <span class="old old3">8 350 <span class="rouble">a</span></span>
+                        <span class="old old4">9 900 <span class="rouble">a</span></span>
+                    </div>
+                    <div class="pig pig1">Сэкономь 790 <span class="rouble">a</span></div>
+                    <div class="pig pig2">Сэкономь 700 <span class="rouble">a</span></div>
+                    <div class="pig pig3">Сэкономь 850 <span class="rouble">a</span></div>
+                    <div class="pig pig4">Сэкономь 1000 <span class="rouble">a</span></div>
+
+                    <form method="POST" action="send.php" name="order">
+                        <input type="hidden" name="item" value="La Prima «Эдем»">
+                        <input type="hidden" name="price" value="5 200">
+                        <input type="hidden" name="image" value="img/3.1.png">
+                        <div class="field">
+                            <input type="text" class="name" name="name" placeholder="Ваше имя"><span class="error">Пожалуйста, заполните поле</span>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="phone" class="phone" placeholder="Ваш телефон"><span class="error">Пожалуйста, заполните поле</span>
+                        </div> 
+                        <p><strong>Выберите подарок:</strong></p>
+                        
+                        <div class="gift_inputs">
+                            <input name="gift" type="radio" value="Свечи" id="candles" checked>
+                            <label for="candles">Свечи</label>
+
+                            <input name="gift" type="radio" value="Аромапалочки" id="aroma">
+                            <label for="aroma">Аромапалочки</label>
+                            
+                            <input name="gift" type="radio" value="Саше" id="sashe">
+                            <label for="sashe">Саше</label>
+                        </div>
+                        <div class="check">
+                            <label>
+                                <input type="checkbox" name="check" id="check">
+                                <span class="checkbox"></span>
+                                <span class="checkbox_text">Я согласен на обработку<br>персональных данных в&nbsp;соответствии&nbsp;с&nbsp;законодательством&nbsp;РФ</span>
+                            </label>
+                        </div>
+
+                        <div class="colors">
+                            <span class="title">Цвет: </span>
+                            <input name="color" type="radio" value="нежно-голубой с принтом" id="edem" checked>
+                            <label for="edem"></label>
+                        </div>
+
+                        <select name="size" id="collection_images3_size">
+                            <option data="0" value="Выберите размер">Выберите размер</option>
+                            <option data="1" value="1,5 спальный">1,5 спальный</option>
+                            <option data="2" value="2 спальный">2 спальный</option>
+                            <option data="3" value="евро">Евро</option>
+                            <option data="4" value="дуэт">Дуэт</option>
+                        </select>
+
+                        <input type="submit" value="Заказать">
+                    </form> 
+                    <div class="time">Покупай за две минуты онлайн<br>вместо трех часов в магазине!</div>
+                </div>
+                <p class="collection_title">La Prima «Эдем»</p>
+                <div class="left_gallery">
+                    <ul class="collection_images" id="collection_images3">
+                        <li number="1">
+                            <img full-size="img/3.1_full.png" src="img/3.1.png" alt="" title="">
+                        </li>
+                        <li number="2">
+                            <img full-size="img/3.2_full.png" src="img/3.2.png" alt="" title="">
+                        </li>
+                        <li number="3">
+                            <img full-size="img/3.3_full.png" src="img/3.3.png" alt="" title="">
+                        </li>
+                        <li number="4">
+                            <img full-size="img/3.4_full.png" src="img/3.4.png" alt="" title="">
+                        </li>
+                        <li number="5">
+                            <img full-size="img/3.5_full.png" src="img/3.5.png" alt="" title="">
+                        </li>
+                    </ul>
+                    <div class="control">
+                        <a class="gallery_arrow" href="" id="collection_images3_left">&#8592;</a>
+                        <span><span id="collection_images3_current">1</span>/<span id="collection_images3_count"></span></span>
+                        <a class="gallery_arrow"  href="" id="collection_images3_right">&#8594;</a>
+                    </div>
+                    <a class="full_size" id="collection_images3_full_size" data-fancybox="collection_images3" href="img/3.1_full.png"></a>
+
+                    <div class="hotels clients"></div>
+                </div>
+                <div class="left">
+                    <div class="table">
+                        <p class="tr"><span class="td">Материал</span><span class="td">мако-сатин</span></p>
+                        <p class="tr"><span class="td">Плотность</span><span class="td">300 ТС</span></p>
+                        <p class="tr"><span class="td">Состав</span><span class="td">100% египетский хлопок</span></p>
+                        <p class="tr"><span class="td">Дополнительно</span><span class="td">наволочки-трансформеры</span></p>
+                    </div>
+                    <div class="desc"><p>Увеличенный размер клапана наволочки позволяет одеть ее на подушку всего за 10 секунд. Благодаря специальным прорезям, вы теперь можете заправить пододеяльник без посторонней помощи в 3 раза быстрее. Постельное белье мягкое, гладкое на ощупь. Прочное и долговечное: не пилингуется, сохраняет яркость и блеск. За ним также легко ухаживать: быстро сохнет и практически не мнется.</p></div>
+                </div>
+                <script>
+                $(function() {
+                    $('#collection_images3').carouFredSel({
+                        circular: true,
+                        infinite: true,
+                        responsive: true,
+                        height: 410,
+                        width:750,
+                        prev: '#collection_images3_left',
+                        next: '#collection_images3_right',
+                        scroll: { items: 1,
+                            onAfter:  function(data){
+                            $('#collection_images3_full_size').attr('href', $(this).find('img').attr('full-size'));
+                            $('#collection_images3_current').html($(this).find('li').attr('number'));
+                            }
+                        },
+                        onCreate:  function(data){
+                            $('#collection_images3_count').html(this.childElementCount);
+                        },
+
+                        auto: false,
+                        items: {
+                            visible: {
+                                min: 1,
+                                max: 1
+                            },
+                            width:750 
+                        },
+                        swipe: {
+                            onTouch: true
+                        }
+                    });
+                });
+                </script>
+            </li>

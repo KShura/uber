@@ -1,0 +1,85 @@
+<section class="collection" id="collection">
+    <div class="wrapper">
+        <p class="title">Посмотрите эксклюзивную коллекцию,<span>которую Вы не найдете ни в одном магазине города</span></p>
+        <div class="collection-control">
+            <a class="arrow arrow_left" href="" id="collection-left"></a>
+            <a class="arrow arrow_right" href="" id="collection-right"></a>
+        </div>
+        <ul class="collection-ul">
+            //= items/item1.html
+            //= items/item2.html
+            //= items/item3.html
+            //= items/item4.html
+            //= items/item5.html
+            //= items/item6.html
+        </ul>
+        <div id="collection-page" class="collection-page"></div>
+
+        <div class="table pluses">
+            <div class="tr">
+                <div class="td">
+                    <strong>Оплата наличными или картой</strong>
+                    Мелочь больше не нужна — наши курьеры принимают карты к оплате!
+                </div>
+                <div class="td">
+                    <strong>Обмен и возврат без проблем</strong>
+                    Купили и передумали? Не нарушайте целостность упаковки — мы вернем деньги или обменяем покупку!
+                </div>
+                <div class="td">
+                    <strong>Бесплатная доставка от 4 990 <span class="rouble">j</span></strong>
+                    От клика до двери в удобное для Вас время!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+$(function() {
+	$('.collection-ul').carouFredSel({
+		circular: true,
+		infinite: true,
+		responsive: true,
+		width:1100,
+		prev: '#collection-left',
+		next: '#collection-right',
+        pagination: '#collection-page',
+		scroll: { items: 1
+		},
+		auto: false,
+		items: {
+			visible: {
+				min: 1,
+				max: 1
+			},
+			width:1100 
+		},
+		swipe: {
+			onTouch: true
+		}
+	});
+
+    $('select[name="size"]').change(function() {
+        var data = $(this).find(':selected').attr('data');
+        if (data == "0") data = "1";
+        $(this).closest('.item').find('.prices .new').css('display', 'none');                        
+        $(this).closest('.item').find('.prices .new.new' +  data).css('display', 'block');
+        $(this).closest('.item').find('input[name="price"]').val($(this).closest('.item').find('.prices .new.new' +  data + ' .price').html());
+
+        $(this).closest('.item').find('.prices .old').css('display', 'none');                        
+        $(this).closest('.item').find('.prices .old.old' +  data).css('display', 'block');
+
+        $(this).closest('.item').find('.pig').css('display', 'none');                        
+        $(this).closest('.item').find('.pig.pig' +  data).css('display', 'block');
+    });
+
+    $('select').styler();
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    var iOS = deviceAgent.match(/(iphone|ipod|ipad)/);
+    if (!iOS) {
+        $('section.collection ul li.item form select').css('display', 'none');
+    } else {
+        $('section.collection ul li.item form .jq-selectbox__select').css('display', 'none');
+    }
+});
+
+</script>

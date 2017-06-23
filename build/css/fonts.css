@@ -1,0 +1,30 @@
+@font-face {
+  font-family: MullerRegular;
+  src: url(../fonts/MullerRegular.otf);
+}
+@font-face {
+  font-family: MullerLight;
+  src: url(../fonts/MullerLight.otf);
+}
+@font-face {
+  font-family: MullerBold;
+  src: url(../fonts/MullerBold.otf);
+}
+@font-face {
+  font-family: MullerMedium;
+  src: url(../fonts/MullerMedium.otf);
+}
+@font-face {
+  font-family: MullerThin;
+  src: url(../fonts/MullerThin.otf);
+}
+@font-face {
+  font-family: MullerLightItalic;
+  src: url(../fonts/MullerLightItalic.otf);
+}
+@font-face {
+  font-family: Rouble;
+  src: url(../fonts/rouble.otf);
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvbnRzLmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSwwQkFBQTtFQUNBLG9DQUFBOztBQUdKO0VBQ0ksd0JBQUE7RUFDQSxrQ0FBQTs7QUFHSjtFQUNJLHVCQUFBO0VBQ0EsaUNBQUE7O0FBR0o7RUFDSSx5QkFBQTtFQUNBLG1DQUFBOztBQUdKO0VBQ0ksdUJBQUE7RUFDQSxpQ0FBQTs7QUFHSjtFQUNJLDhCQUFBO0VBQ0Esd0NBQUE7O0FBR0o7RUFDSSxtQkFBQTtFQUNBLDZCQUFBIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XHJcbiAgICBmb250LWZhbWlseTogTXVsbGVyUmVndWxhcjsgXHJcbiAgICBzcmM6IHVybCguLi9mb250cy9NdWxsZXJSZWd1bGFyLm90Zik7IFxyXG59XHJcblxyXG5AZm9udC1mYWNlIHtcclxuICAgIGZvbnQtZmFtaWx5OiBNdWxsZXJMaWdodDsgXHJcbiAgICBzcmM6IHVybCguLi9mb250cy9NdWxsZXJMaWdodC5vdGYpOyBcclxufVxyXG5cclxuQGZvbnQtZmFjZSB7XHJcbiAgICBmb250LWZhbWlseTogTXVsbGVyQm9sZDsgXHJcbiAgICBzcmM6IHVybCguLi9mb250cy9NdWxsZXJCb2xkLm90Zik7IFxyXG59XHJcblxyXG5AZm9udC1mYWNlIHtcclxuICAgIGZvbnQtZmFtaWx5OiBNdWxsZXJNZWRpdW07IFxyXG4gICAgc3JjOiB1cmwoLi4vZm9udHMvTXVsbGVyTWVkaXVtLm90Zik7IFxyXG59XHJcblxyXG5AZm9udC1mYWNlIHtcclxuICAgIGZvbnQtZmFtaWx5OiBNdWxsZXJUaGluOyBcclxuICAgIHNyYzogdXJsKC4uL2ZvbnRzL011bGxlclRoaW4ub3RmKTsgXHJcbn1cclxuXHJcbkBmb250LWZhY2Uge1xyXG4gICAgZm9udC1mYW1pbHk6IE11bGxlckxpZ2h0SXRhbGljOyBcclxuICAgIHNyYzogdXJsKC4uL2ZvbnRzL011bGxlckxpZ2h0SXRhbGljLm90Zik7IFxyXG59XHJcblxyXG5AZm9udC1mYWNlIHtcclxuICAgIGZvbnQtZmFtaWx5OiBSb3VibGU7IFxyXG4gICAgc3JjOiB1cmwoLi4vZm9udHMvcm91YmxlLm90Zik7IFxyXG59Il0sImZpbGUiOiJmb250cy5jc3MiLCJzb3VyY2VSb290IjoiL3NyYy9zdHlsZSJ9 */

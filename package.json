@@ -1,18 +1,17 @@
 {
-  "name": "kult-sna",
+  "name": "uber",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.18.8",
-    "gulp-imagemin": "^3.2.0",
     "gulp": "^3.9.1",
-    "gulp-rigger": "^0.5.8",
+    "gulp-imagemin": "^3.2.0",
     "gulp-less": "^3.3.0",
+    "gulp-rigger": "^0.5.8",
     "gulp-sourcemaps": "^2.6.0",
+    "gulp-typescript": "^3.1.6",
     "gulp-watch": "^4.3.11",
     "gulp-tsconfig": "^0.1.0",
-    "gulp-typescript": "^3.1.6",
     "imagemin-pngquant": "^5.0.0",
     "typescript": "^2.3.2"
   },
@@ -20,14 +19,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sergnek/kult-sna.git"
-  },
-  "author": "",
+  "author": "SN",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sergnek/kult-sna/issues"
-  },
-  "homepage": "https://github.com/sergnek/kult-sna#readme"
+  "description": ""
 }

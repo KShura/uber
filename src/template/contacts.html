@@ -1,0 +1,48 @@
+<section class="contacts">
+    <div class="map" id="map"></div>
+    <div class="wrapper">
+        <ul class="menu">
+            <li><a href="#">Водителям</a></li>
+            <li><a href="#">Документы</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+
+        <div class="main">
+            <p class="city">Контакты в <span>Санкт-Петербурге</span></p>
+            <p>г. Санкт-Петербург,<br>Выборгское шоссе, д. 212, офис 9с</p>
+            <p><span class="title">Телефон:</span>+7 (812) 995-38-05<br>+7 (812) 995-38-05</p>
+            <p><span class="title">Е-mail:</span>info@spb-uber.ru</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="links">
+            <p>Скачайте приложение «UBER Partner для водителей»:</p>
+            <a href="#"><img src="img/googleplay.png" alt="" title=""></a>
+            <a href="#"><img src="img/appstore.png" alt="" title=""></a>
+        </div>
+    </div>
+
+</section>
+<script type="text/javascript">
+    ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map('map', {
+            center: [ 59.932464, 30.351801 ],
+            zoom: 15,
+            controls: ["zoomControl", "geolocationControl", "routeEditor"]
+        }),
+
+        myPlacemark1 = new ymaps.Placemark([ 59.932464, 30.351801 ], {
+            balloonContent: '[[++site_name]]'
+        }, {
+            iconLayout: 'default#image',
+            
+            iconImageHref: '/assets/img/ymarker.png',
+            iconImageSize: [48, 66],
+            iconImageOffset: [-24, -66],
+        });       
+    myMap.geoObjects.add(myPlacemark1);
+}
+</script>

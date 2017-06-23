@@ -1,0 +1,175 @@
+    <!DOCTYPE html>
+    <html>
+    <head lang="ru">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1220">
+    
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>Uber</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="js/libs/jquery.formstyler.js"></script>
+        <script src="js/libs/jquery.carouFredSel-6.2.1.js"></script>
+        <script src="js/libs/jquery.maskedinput-1.4.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script src="http://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+        
+    </head>
+    <body>
+
+    <header>
+        <div class="wrapper">
+            <a href="/" class="logo">
+                <img src="img/logo.png" alt="" title="">
+            </a>
+    
+            <ul class="top_menu">
+                <li class="drivers"><a href="#">Водителям</a>
+                    <ul>
+                        <li><a href="#">Требования к водителям</a></li>
+                        <li><a href="#">Требования к автомобилю</a></li>
+                        <li><a href="#">Необходимые документы</a></li>
+                        <li><a href="#">Лицензия</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="/reviews.html">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li class="city"><a href="#">Санкт-Петербург</a>
+                    <ul>
+                        <li><a href="#">Краснодар</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <div class="right">
+                <p class="phones">
+                    <span>+7 (812) 995-38-05</span>
+                    <span>+7 (812) 995-38-05</span>
+                </p>
+                <div class="social">
+                    <a href="" class="viber"></a>
+                    <a href="" class="whatsapp"></a>
+                    <a href="" class="telegram"></a>
+                    <span>Только для водителей!</span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <section class="breadcrumbs">
+        <div class="wrapper">
+            <a href="/">Главная</a> > <a href="#">Название раздела</a> > Название страницы
+        </div>
+    </section>
+
+<section class="autos"></section>
+
+
+    <section class="contacts">
+        <div class="map" id="map"></div>
+        <div class="wrapper">
+            <ul class="menu">
+                <li><a href="#">Водителям</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+    
+            <div class="main">
+                <p class="city">Контакты в <span>Санкт-Петербурге</span></p>
+                <p>г. Санкт-Петербург,<br>Выборгское шоссе, д. 212, офис 9с</p>
+                <p><span class="title">Телефон:</span>+7 (812) 995-38-05<br>+7 (812) 995-38-05</p>
+                <p><span class="title">Е-mail:</span>info@spb-uber.ru</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="links">
+                <p>Скачайте приложение «UBER Partner для водителей»:</p>
+                <a href="#"><img src="img/googleplay.png" alt="" title=""></a>
+                <a href="#"><img src="img/appstore.png" alt="" title=""></a>
+            </div>
+        </div>
+    
+    </section>
+    <script type="text/javascript">
+        ymaps.ready(init);
+    
+    function init () {
+        var myMap = new ymaps.Map('map', {
+                center: [ 59.932464, 30.351801 ],
+                zoom: 15,
+                controls: ["zoomControl", "geolocationControl", "routeEditor"]
+            }),
+    
+            myPlacemark1 = new ymaps.Placemark([ 59.932464, 30.351801 ], {
+                balloonContent: '[[++site_name]]'
+            }, {
+                iconLayout: 'default#image',
+                
+                iconImageHref: '/assets/img/ymarker.png',
+                iconImageSize: [48, 66],
+                iconImageOffset: [-24, -66],
+            });       
+        myMap.geoObjects.add(myPlacemark1);
+    }
+    </script>
+
+    <footer>
+        <div class="wrapper">
+            <div class="copyright">&#169; SPB-UBER. 2017</div>
+            <div class="polite">Политика конфиденциальности</div>
+            <div class="buttons">
+                <a href="#" class="docs">Отправить документы</a>
+                <a href="#" class="docs">Отправить реквизиты</a>
+                <a href="#popup_form" class="button popup_show">Связаться с нами</a>
+            </div>
+        </div>
+    </footer>
+    <div class="popup_background"></div>
+    <div class="popup thanks" id="thanks">
+        <p class="title">Спасибо, Человек!</p>
+        <p>Мы получили вашу заявку<br>и свяжемся с вами<br>в течение 1 рабочего дня</p>
+    <a href="javascript:void(0)" class="close"></a>
+    </div>
+    
+    <div class="popup form" id="popup_form">
+        <p class="title">Свяжитесь с нами</p>
+         <form class="" name="banner_form" form-type="modal" method="POST" action="#">
+            <div class="field animation">
+                <input type="text" name="name" placeholder="Имя">
+                <label>Имя</label>
+            </div>
+            <div class="field animation">
+                <input type="text" name="phone" placeholder="+7 (999) 999 99 99">
+                <label>Телефон</label>
+            </div>
+            <div class="field animation">
+                <select name="city">
+                    <option value="1">Санкт-Петербург</option>
+                    <option value="1">Краснодар</option>
+                </select> 
+            </div>
+            <div class="field animation textarea">
+                <label>Сообщение</label>
+                <textarea placeholder="Сообщение"></textarea>
+            </div>
+            <div class="field">
+                <div class="captcha"></div>
+            </div>
+               
+            <input type="submit" value="Подключиться к UBER">
+        </form>
+    <a href="javascript:void(0)" class="close"></a>
+    </div>
+    
+    <script src="js/popups.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/send_ajax.js"></script>
+    </body>
+    </html>

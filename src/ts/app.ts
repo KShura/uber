@@ -1,13 +1,43 @@
 /// <reference path="../../typings/index.d.ts" />
+/// <reference path="reviews.ts" />
 
 $(function() {
-    var deviceAgent = navigator.userAgent.toLowerCase();
-    var iOS = deviceAgent.match(/(iphone|ipod|ipad)/);
-    if (iOS) {
-        $('label').click(function (event) {
-            $('#' + $(event.target).attr('for')).attr('checked', "true").change();
-        });
-    }
+    $('.animation input').focus(function() {
+        showInputName(this);
+    });
+    $('.animation input').focusout(function() {
+        hideInputName(this);
+    });
+    $('.animation textarea').focus(function() {
+        showInputName(this);
+    });
+    $('.animation textarea').focusout(function() {
+        hideInputName(this);
+    });
+    
+    WebFont.load({
+        custom: {
+            families: ['MullerRegular', 'MullerLight', 'MullerLightItalic', 'MullerBold', 'MullerMedium', 'MullerThin'],
+            urls: ['css/fonts.css']
+        },
+        active: function() {
+            reviewsSlider();
+        }
+    }); 
+}); 
 
-    $('input[name="phone"]').mask('+7 999 999 99 99');
-});
+function showInputName(input:any) {
+    $(input).siblings('label').animate({
+        top: 0,
+        left: 0,
+        fontSize: 14,
+    }, 300);
+}
+
+function hideInputName(input:any) {
+    $(input).siblings('label').animate({
+        top: 25,
+        left: 17,
+        fontSize: 0,
+    }, 300);
+}

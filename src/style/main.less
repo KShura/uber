@@ -69,12 +69,34 @@ img {
     max-width: 100%;
 }
 
-h2 {
+h1, h2 {
+    margin: 0;
     font-size: 48px;
     font-family: @light;
     margin-bottom: 40px;
 }
 
+h3 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 30px 0;
+}
+
+a, a:visited {
+    color: @link_color;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 25px 0;
+    max-width: 960px;
+}
 
 .captcha {
     width: 100%;
@@ -183,6 +205,24 @@ a.button2 {
         }
     }
 
+a.button3 {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    height: 40px;
+    width: 180px;
+    padding-top: 12px;
+    font-size: 16px;
+    text-align: center;
+    font-family: @regular;
+
+    &:hover {
+        border-color: @link_color;
+        background: @link_color;
+        text-decoration: none;
+    }
+}
+
 a.button {
     padding-top: 23px;
 
@@ -226,15 +266,6 @@ select::-ms-expand {
   display: none;
 }
 
-a, a:visited {
-    color: @link_color;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 .breadcrumbs {
     font-size: 12px;
     line-height: 24px;
@@ -242,6 +273,7 @@ a:hover {
     background: #f9f9f9;   
     padding: 3px 0;
     color: #85898a;
+    margin-bottom: 50px;
 }
 
 
@@ -504,6 +536,7 @@ header {
         width: 660px; 
         position: absolute;
         top: 115px;
+        margin: 0;
     }
 
     .registration {
@@ -513,6 +546,7 @@ header {
         color: #fff; 
         position: absolute;
         top: 320px;
+        margin: 0;
     }
 
     .form {
@@ -532,6 +566,7 @@ header {
             padding-left: 40px;
             background: url(../img/wheel.png) left center no-repeat;
             line-height: 26px;
+            margin: 0;
 
             & > span {
                 font-size: 14px;
@@ -582,7 +617,10 @@ header {
 }
 
 .advantages {
-    padding: 60px 0;
+
+    h2 {
+        margin-top: 60px;
+    }
 
     .first_line > div {
         display: inline-block;
@@ -614,7 +652,7 @@ header {
             font-size: 20px;
             font-family: @medium;
             line-height: 20px;
-            max-width: 145px;
+            max-width: 147px;
         }
 
         .desc {
@@ -644,6 +682,7 @@ header {
 
     .second_line {
         margin-top: 80px;
+        margin-bottom: 60px;
         
         & > div {
             width: 540px;
@@ -680,6 +719,40 @@ header {
             }
         }
     }
+
+    &.for_content {
+        padding: 0;
+
+        .first_line > div{
+            width: 240px;
+            margin-right: 14px;
+            padding: 23px 15px 0 25px;
+            height: 180px;
+
+            .icon {
+                top: -20px;
+                right: 20px;
+            }
+
+            .number {
+                font-size: 26px;
+                display: block;
+            }
+
+            .title {
+                display: block;
+                font-size: 16px;
+                line-height: 24px;
+                max-width: none;
+            }
+
+            .desc {
+                font-size: 14px;
+                line-height: 21px;
+                margin-top: 10px;
+            }
+        }
+    }
 }
 
 section.demands {
@@ -706,6 +779,7 @@ section.demands {
             background-repeat: no-repeat;
             padding-left: 68px;
             background-image: url(../img/driver-license.png);
+            margin: 0;
         }
 
         &.driver {
@@ -754,21 +828,15 @@ section.man_banner {
 
     a {
         display: inline-block;
+        vertical-align: top;
         width: 260px;
-        line-height: 38px;
-        color: #fff;
         font-size: 16px;
-        text-align: center;
-        border-radius: 6px;
+        height: 40px;
 
-        &.all {
-            background: @link_color;
-            border: 1px solid @link_color;
+        &.button {
             margin-right: 40px;
-        }
-
-        &.docs {
-            border: 1px solid #fff;
+            border: 1px solid @link_color;
+            padding-top: 13px;
         }
     }
 }
@@ -836,6 +904,7 @@ section.man_banner {
             font-size: 16px;
             font-family: @light;
             padding: 0 10px;
+            margin: 0;
         }
 
         &.call {
@@ -925,6 +994,7 @@ section.man_banner {
     .title {
         font-size: 20px;
         line-height: 30px;
+        margin: 0;
         margin-bottom: 15px;
     }
 
@@ -932,6 +1002,7 @@ section.man_banner {
         font-size: 16px;
         line-height: 24px;
         font-family: @light;
+        margin: 0;
         margin-bottom: 25px;
     }
 
@@ -960,6 +1031,7 @@ section.man_banner {
         .desc {
             font-size: 30px;
             font-family: @light;
+            margin: 0;
             margin-bottom: 30px;
         }
 
@@ -1159,6 +1231,7 @@ section.question {
             line-height: 45px;
             font-family: @light;
             text-align: center;
+            margin: 0;
         }
 
         .field {
@@ -1194,6 +1267,7 @@ section.question {
     color: #fff;
     height: 460px;
     box-shadow: 0 -7px 25px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 60px;
 
     .map {
         width: 50%;
@@ -1302,27 +1376,11 @@ footer {
         margin: 0 10px;
         display: inline-block;
         vertical-align: middle;
+        font-size: 14px;
+        padding-top: 12px;
 
         &:first-child {
             margin-left: 0;
-        }
-    }
-
-    a.docs {
-        color: #fff;
-        border: 1px solid #fff;
-        border-radius: 6px;
-        height: 40px;
-        width: 180px;
-        padding-top: 13px;
-        font-size: 14px;
-        text-align: center;
-        font-family: @regular;
-
-        &:hover {
-            border-color: @link_color;
-            color: @link_color;
-            text-decoration: none;
         }
     }
 
@@ -1334,4 +1392,265 @@ footer {
         font-size: 14px;
     }
 
+}
+
+
+.left_part {
+    width: 360px;
+    float: left;
+
+    .left_menu {
+        width: 100%;
+        border-radius: 10px;
+        background: #fff;
+        font-size: 20px;
+        box-shadow: 0 21px 30px -10px rgba(0, 0, 0, 0.4);
+        margin-bottom: 30px;
+
+        li {
+
+            a {
+                color: @main_color;
+                padding: 19px 40px;
+                display: block;
+
+                &:hover {
+                    color: #2ac2d0;
+                    background: #f0feff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .left_banner {
+        width: 100%;
+        height: 380px;
+        background: url(../img/left_banner.png);
+        padding: 25px 30px;
+        color: #fff;
+        margin: 30px 0;
+
+        .title {
+            font-size: 20px;
+            font-family: @medium;
+        }
+
+        .number {
+            font-size: 45px;
+            font-family: @medium;
+            margin: 15px 0;
+        }
+
+        .desc {
+            font-size: 16px;
+            line-height: 24px;
+            font-family: @light;
+
+            span {
+                font-family: @bold;
+            }
+        }
+    }
+}
+
+.content {
+    width: 770px;
+    float: right;
+}
+
+.table.cars {
+    width: 100%;
+    font-family: @light;
+    font-size: 16px;
+
+    .tr {
+
+        .td {
+            padding: 17px 0 15px;
+
+            &:first-child {
+                width: 400px;
+                padding-left: 20px;
+            }
+
+            &:nth-child(2) {
+                width: 170px;
+            }
+        }
+
+        &:nth-child(2n) {
+            background: #f9f9f9;
+
+            .td {
+                padding: 7px 0 5px;
+
+                &:first-child {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+
+    .header {
+        font-family: @regular;
+        font-size: 20px;
+    }
+}
+
+.find_car {
+    width: 100%;
+    background: url(../img/find_car.png) left top no-repeat;
+    height: 300px;
+    padding: 39px 36px;
+    color: #fff;
+    margin-top: 45px;
+
+    .title {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    .desc {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 38px 0;
+    }
+
+    .button {
+        width: 260px;
+        height: 40px;
+        padding-top: 13px;
+    }
+}
+
+.documents {
+    width: 100%;
+
+    li {
+        width: 240px;
+        margin-right: 20px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 50px;
+
+        img {
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.documents_links {
+    margin-bottom: 60px;
+
+    a {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        height: 40px;
+        padding-top: 13px;
+        width: 240px;
+
+        &.example {
+            color: @main_color;
+            border: 1px solid #dbe4eb;
+            border-radius: 10px;
+            margin-left: 20px;
+            text-align: center;
+
+            &:hover {
+                border-color: @link_color;
+                color: @link_color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.connect {
+    width: 100%;
+    background: url(../img/find_car.png) left top no-repeat;
+    height: 260px;
+    padding: 39px 36px;
+    color: #fff;
+    margin-top: 20px;
+
+    .title {
+        font-size: 36px;
+        line-height: 54px;
+        margin: 0;
+    }
+
+    a {
+        width: 220px;
+        height: 40px;
+        padding-top: 12px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 30px;
+
+        &.button {
+            width: 260px;
+            margin-right: 20px;
+        }
+    }
+
+    &.big {
+        background: url(../img/connect_big.png);
+    }
+}
+
+.instruction {
+    margin-top: 50px;
+
+    p {
+        margin: 0;
+    }
+
+    ul {
+        width: 100%;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+            width: 360px;
+            margin: 35px 40px 40px 0;
+            padding-right: 50px;
+            font-size: 20px;
+            line-height: 30px;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            .img {
+                display: block;
+                box-shadow: 0 21px 30px -10px rgba(0, 0, 0, 0.4);
+                border-radius: 36px;
+                width: 258px;
+                margin: 15px 0 0;
+
+                img {
+                    max-width: 260px;
+                    width: 260px;
+                    display: block;
+                    position: relative;
+                    left: -2px;
+                }
+            }
+
+            .desc {
+                font-size: 14px;
+                line-height: 21px;
+                margin-top: 20px;
+            }
+        }
+    }
 }

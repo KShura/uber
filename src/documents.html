@@ -8,7 +8,12 @@
     //= template/left_part.html
 
     <div class="content">
-        <h1>Какие документы предоставить в&nbsp;Санкт-Петербурге</h1>
+        <h1>Какие документы предоставить в&nbsp;<span class="select_city">
+            <select class="city">
+                <option value="spb">Санкт-Петербурге</option>
+                <option value="kr">Краснодаре</option>
+            </select>
+        </span></h1>
 
         <ul class="documents">
             <li>
@@ -50,7 +55,7 @@
         </ul>  
         <div class="documents_links"> 
             <a href="#" class="button">Отправить документы</a>
-            <a href="#docs" class="example">Пример пакета документов</a>
+            <a href="#docs" class="example popup_show">Пример пакета документов</a>
         </div>
 
         <div class="advantages for_content">

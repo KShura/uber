@@ -26,25 +26,26 @@
             </a>
     
             <ul class="top_menu">
-                <li class="drivers"><a href="#">Водителям</a>
+                <li class="drivers"><a href="/drivers.html">Водителям</a>
                     <ul>
-                        <li><a href="#">Требования к водителям</a></li>
+                        <li><a href="/drivers.html">Требования к водителям</a></li>
                         <li><a href="/cars.html">Требования к автомобилю</a></li>
                         <li><a href="/documents.html">Необходимые документы</a></li>
-                        <li><a href="#">Лицензия</a></li>
-                        <li><a href="#">Тарифы</a></li>
+                        <li><a href="/license.html">Лицензия</a></li>
+                        <li><a href="/tariff.html">Тарифы</a></li>
                     </ul>
                 </li>
                 <li><a href="/documents.html">Документы</a></li>
                 <li><a href="/about.html">О нас</a></li>
                 <li><a href="/reviews.html">Отзывы</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li class="city"><a href="#">Санкт-Петербург</a>
-                    <ul>
-                        <li><a href="#">Краснодар</a></li>
-                    </ul>
-                </li>
+                <li><a href="/contacts.html">Контакты</a></li>
             </ul>
+            <span class="select_city">
+                <select class="city">
+                    <option value="spb">Санкт-Петербург</option>
+                    <option value="kr">Краснодар</option>
+                </select>
+            </span>
     
             <div class="right">
                 <p class="phones">
@@ -71,12 +72,12 @@
 <div class="wrapper">
     <div class="left_part">
         <ul class="left_menu">
-            <li><a href="#">Требования к водителям</a></li>
-            <li><a href="#">Сменить партнера</a></li>
+            <li><a href="/drivers.html">Требования к водителям</a></li>
+            <li><a href="/change_partner.html">Сменить партнера</a></li>
             <li><a href="/cars.html">Требования к автомобилю</a></li>
             <li><a href="/documents.html">Необходимые документы</a></li>
-            <li><a href="#">Лицензия</a></li>
-            <li><a href="#">Тарифы</a></li>
+            <li><a href="/license.html">Лицензия</a></li>
+            <li><a href="/tariff.html">Тарифы</a></li>
         </ul>
         <div class="left_banner">
             <p class="title">Бонус при регистрации</p>
@@ -86,7 +87,12 @@
     </div>
 
     <div class="content">
-        <h1>Какие документы предоставить в&nbsp;Санкт-Петербурге</h1>
+        <h1>Какие документы предоставить в&nbsp;<span class="select_city">
+            <select class="city">
+                <option value="spb">Санкт-Петербурге</option>
+                <option value="kr">Краснодаре</option>
+            </select>
+        </span></h1>
 
         <ul class="documents">
             <li>
@@ -128,7 +134,7 @@
         </ul>  
         <div class="documents_links"> 
             <a href="#" class="button">Отправить документы</a>
-            <a href="#docs" class="example">Пример пакета документов</a>
+            <a href="#docs" class="example popup_show">Пример пакета документов</a>
         </div>
 
         <div class="advantages for_content">
@@ -177,7 +183,13 @@
             </ul>
     
             <div class="main">
-                <p class="city">Контакты в <span>Санкт-Петербурге</span></p>
+                <p class="city_title">Контакты в </p>
+                    <span class="select_city">
+                        <select class="city">
+                            <option value="spb">Санкт-Петербурге</option>
+                            <option value="kr">Краснодаре</option>
+                        </select>
+                    </span>
                 <p>г. Санкт-Петербург,<br>Выборгское шоссе, д. 212, офис 9с</p>
                 <p><span class="title">Телефон:</span>+7 (812) 995-38-05<br>+7 (812) 995-38-05</p>
                 <p><span class="title">Е-mail:</span>info@spb-uber.ru</p>
@@ -202,13 +214,13 @@
             }),
     
             myPlacemark1 = new ymaps.Placemark([ 59.932464, 30.351801 ], {
-                balloonContent: '[[++site_name]]'
+                balloonContent: ''
             }, {
                 iconLayout: 'default#image',
                 
-                iconImageHref: '/assets/img/ymarker.png',
-                iconImageSize: [48, 66],
-                iconImageOffset: [-24, -66],
+                iconImageHref: '/img/ymarker.png',
+                iconImageSize: [39, 53],
+                iconImageOffset: [-20, -53],
             });       
         myMap.geoObjects.add(myPlacemark1);
     }
@@ -233,33 +245,96 @@
     </div>
     
     <div class="popup form" id="popup_form">
-        <p class="title">Свяжитесь с нами</p>
-         <form class="" name="banner_form" form-type="modal" method="POST" action="#">
-            <div class="field animation">
-                <input type="text" name="name" placeholder="Имя">
-                <label>Имя</label>
-            </div>
-            <div class="field animation">
-                <input type="text" name="phone" placeholder="+7 (999) 999 99 99">
-                <label>Телефон</label>
-            </div>
-            <div class="field animation">
-                <select name="city">
-                    <option value="1">Санкт-Петербург</option>
-                    <option value="1">Краснодар</option>
-                </select> 
-            </div>
-            <div class="field animation textarea">
-                <label>Сообщение</label>
-                <textarea placeholder="Сообщение"></textarea>
-            </div>
-            <div class="field">
-                <div class="captcha"></div>
-            </div>
-               
-            <input type="submit" value="Подключиться к UBER">
-        </form>
+        <div class="wrap">
+            <p class="title">Свяжитесь с нами</p>
+            <form class="" name="banner_form" form-type="modal" method="POST" action="#">
+                <div class="field animation">
+                    <input type="text" name="name" placeholder="Имя" class="required">
+                    <label>Имя</label>
+                </div>
+                <div class="field animation">
+                    <input type="text" name="phone" placeholder="+7 (999) 999 99 99" class="required">
+                    <label>Телефон</label>
+                </div>
+                <div class="field animation">
+                     <div class="select">
+                        <select name="city">
+                            <option value="1">Санкт-Петербург</option>
+                            <option value="1">Краснодар</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="field animation textarea">
+                    <label>Сообщение</label>
+                    <textarea placeholder="Сообщение"></textarea>
+                </div>
+                <div class="field">
+                    <div class="captcha"></div>
+                </div>
+                
+                <input type="submit" value="Подключиться к UBER">
+            </form>
+        </div>
     <a href="javascript:void(0)" class="close"></a>
+    </div>
+    
+    <div class="popup" id="docs">
+        <div class="wrap">
+            <p class="title">Свяжитесь с нами</p>
+                <ul class="documents popup_documents">
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Свидетельство о&nbsp;регистрации&nbsp;ТС
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Страховой полис ОСАГО
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Водительское удостоверение ст. 1
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Водительское удостоверение ст. 2
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Паспорт РФ
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Фотографии Вашего&nbsp;автомобиля
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Ваше личное фото
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Лицензия
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Справка об отсутсвии судимости
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Ваше личное фото
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Лицензия
+                    </li>
+                    <li>
+                        <img src="img/doc.png" alt="" title="">
+                        Справка об отсутсвии судимости
+                    </li>
+                </ul>  
+                <a href="#" class="button">Отправить документы</a>
+                <a href="javascript:void(0)" class="close close_a">Закрыть</a>
+        </div>
+        <a href="javascript:void(0)" class="close"></a>
     </div>
     
     <script src="js/popups.js"></script>

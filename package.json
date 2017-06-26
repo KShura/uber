@@ -21,5 +21,13 @@
   },
   "author": "SN",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergnek/uber.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sergnek/uber/issues"
+  },
+  "homepage": "https://github.com/sergnek/uber#readme",
   "description": ""
 }

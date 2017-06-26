@@ -4,7 +4,7 @@ interface iForm {
   url: string;
   dataArray: any[];
   form_type: string;
-  validation(name:string, phone:string): boolean;
+  validation(): boolean;
   ajax(): void;
 }
 
@@ -20,35 +20,25 @@ class Form implements iForm {
     this.form_type = form_type;
   }
 
-  validation(name:string, phone:string) : boolean {
-    let valid_name:boolean = false;
-    let valid_phone:boolean = false;
+  validation() : boolean {
+    let valid:boolean = true;
 
-    if (phone != "") {
-      valid_phone = true;
-    } 
+    $.each($(this.form).find('input.requi#d02121'), function(i, val) {
+      if($(this).val() == "") {
+        valid = false; 
+        $(this).css('border', '2px solid #d02121');
+        if ($(this).siblings().is(".error_message")) { 
+          $(this).siblings('.error_message').show();
+        }
+      } else {
+        $(this).css('border', ''); 
+        if  ($(this).siblings().is(".error_message")) { 
+          $(this).siblings('.error_message').hide();
+        }
+      }
+     });
 
-    if (name != "") {
-      valid_name = true;
-    }
-
-    if(!valid_name) {            
-      $(this.form).find("input[name='name']").css('border', '2px solid red');
-      $(this.form).find("input[name='name']+.error").css('display', 'block');
-    } else {
-      $(this.form).find("input[name='name']").css('border', '');
-      $(this.form).find("input[name='name']+.error").css('display', 'none');
-    }
-        
-    if(!valid_phone) {
-      $(this.form).find("input[name='phone']").css('border', '2px solid red');
-      $(this.form).find("input[name='phone']+.error").css('display', 'block');
-    } else {
-      $(this.form).find("input[name='phone']").css('border', '');
-      $(this.form).find("input[name='phone']+.error").css('display', 'none');
-    }
-
-    return valid_name && valid_phone;
+    return valid;
   }
 
   ajax(): void {
@@ -56,7 +46,7 @@ class Form implements iForm {
 
     let phone =  $(this.form).find("input[name='phone']").val();
 
-    let valid:boolean = this.validation(name, phone);
+    let valid:boolean = this.validation();
     if(valid) {
       $.ajax({
         type: "POST",

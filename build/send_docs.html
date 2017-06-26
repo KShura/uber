@@ -69,91 +69,58 @@
         </div>
     </section>
 
-<div class="wrapper">
-    <div class="left_part">
-        <ul class="left_menu">
-            <li><a href="/drivers.html">Требования к водителям</a></li>
-            <li><a href="/change_partner.html">Сменить партнера</a></li>
-            <li><a href="/cars.html">Требования к автомобилю</a></li>
-            <li><a href="/documents.html">Необходимые документы</a></li>
-            <li><a href="/license.html">Лицензия</a></li>
-            <li><a href="/tariff.html">Тарифы</a></li>
-        </ul>
-        <div class="left_banner">
-            <p class="title">Бонус при регистрации</p>
-            <p class="number">3000 руб.</p>
-            <p class="desc">Необходимо сделать <span>50 поездок<br>за 14 дней</span> с момента активации</p>        
+    <div class="wrapper">
+        <div class="send_docs">
+            <h1>Отправить документы</h1>
+            <h3>Сделайте фото оригиналов документов на телефон или отсканируйте их. Важно, чтобы документы хорошо читались</h3>
+            <form method="POST" action="#">
+                <h4>Личные данные</h4>
+                <div class="field">
+                    <div class="left">Ваш город</div>
+                    <div class="right">
+                        <div class="select">
+                            <select name="city">
+                                <option value="1">Санкт-Петербург</option>
+                                <option value="1">Краснодар</option>
+                            </select> 
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">Фамилия<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="last_name" placeholder="">
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">Имя<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="name" placeholder="">
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">Мобильный телефон<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="phone" placeholder="">
+                        <p class="desc">Мы позвоним на этот номер, если будут замечания по документам</p>
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">Электронная почта<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="email" placeholder="">
+                        <p class="desc">На этот адрес вы получите письмо с информацией о заявке</p>                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <input type="submit" value="отправить">
+                <h4>Документы</h4>
+            </form>
         </div>
     </div>
-
-    <div class="content">
-        <h1>Сменить партнера</h1>
-        <p>Мы являемся крупным партнером Uber в России, если вы уже подключены к Уберу, вы можете смените вашего партнера на SPB-Uber и вы гарантированно будете получать свой заработок точно в установленные сроки, с низким процентом и прозрачной схемой выплат.</p>
-        <div class="advantages for_content">
-            <h3>Наши преимущества:</h3>
-            <div class="first_line">
-                <div>
-                    <span class="number">4%</span>
-                    <span class="title">Низкая комиссия</span>
-                    <span class="desc">Вы получаете все бонусы, которые платит UBER.</span>
-                    <span class="icon"><img src="img/comission.png"></span>
-                </div>
-                <div>
-                    <span class="number">3000 Р</span>
-                    <span class="title">Бонус за начало работы</span>
-                    <span class="desc">Необходимо сделать 70&nbsp;поездок за 21&nbsp;день с момента активации</span>
-                    <span class="icon"><img src="img/bonus.png"></span>
-                </div>
-                <div>
-                    <span class="number">3000 Р</span>
-                    <span class="title">Бонус за друга</span>
-                    <span class="desc">Денежное вознаграждение за каждого приведённого друга, совершившего 70&nbsp;поездок</span>
-                    <span class="icon"><img src="img/friend.png"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="connect">
-            <p class="title">Подключение водителей<br>к UBER за 30 минут!</p>
-            <a href="#popup_form" class="button popup_show">Заявка на подключение</a>
-            <a href="/change_partner.html" class="button3">Сменить партнера</a>
-        </div>
-        <div class="instruction">
-            <p>Смена партнера через приложение Uber Driver</p>
-            <ul>
-                <li>
-                    1. Информация
-                    <span class="img"><img src="img/instruction1.png" alt="" title=""></span>
-                </li>
-                <li>
-                    2. Помощь
-                    <span class="img"><img src="img/instruction2.png" alt="" title=""></span>
-                </li>
-                <li>
-                    3. Профиль
-                    <span class="img"><img src="img/instruction3.png" alt="" title=""></span>
-                </li>
-                <li>
-                    4. Партнерам
-                    <span class="img"><img src="img/instruction4.png" alt="" title=""></span>
-                </li>
-                <li>
-                    5. Водитель:<br>запрос на смену партнера
-                    <span class="img"><img src="img/instruction5.png" alt="" title=""></span>
-                </li>
-                <li>
-                    6. Завершение перехода<br>к новому партнеру
-                    <span class="img"><img src="img/instruction6.png" alt="" title=""></span>
-                    <p class="desc">Вводите ваши данные и данные нового партнера, выбираете причину перевода и нажимаете в конце экрана кнопку «отправить» </p>
-                </li>
-            </ul>
-            <p>Смена партнера происходит в течении нескольких часов, если хотите ускорить процесс перевода, пришлите нам, после отправки заявки в приложении, вашу Фамилию и Имя на номер телефона +79216440036 в виде SMS или сообщением через Viber или WhatsApp.</p>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-
-
 
     <section class="contacts">
         <div class="map" id="map"></div>

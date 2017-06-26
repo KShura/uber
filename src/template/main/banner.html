@@ -9,25 +9,27 @@
                 </span>
             </p>
             <div class="field animation">
-                <input type="text" name="name" placeholder="Имя">
+                <input type="text" name="name" placeholder="Имя" class="required">
                 <label>Имя</label>
             </div>
             <div class="field animation">
-                <input type="text" name="phone" placeholder="+7 (999) 999 99 99">
+                <input type="text" name="phone" placeholder="+7 (999) 999 99 99" class="required">
                 <label>Телефон</label>
             </div>
             <div class="field animation">
-                <select name="city">
-                    <option value="1">Санкт-Петербург</option>
-                    <option value="1">Краснодар</option>
-                </select> 
+                <div class="select">
+                    <select name="city">
+                        <option value="1">Санкт-Петербург</option>
+                        <option value="1">Краснодар</option>
+                    </select> 
+                </div>
             </div>
             <div class="field left animation">
-                <input type="text" name="car" placeholder="Марка авто">
+                <input type="text" name="car" placeholder="Марка авто" class="required">
                 <label>Марка авто</label>
             </div>
             <div class="field right animation">
-                <input type="text" name="car_year" placeholder="Год выпуска авто">
+                <input type="text" name="car_year" placeholder="Год выпуска авто" class="required">
                 <label>Год выпуска авто</label>
             </div>
             <div class="clearfix"></div>

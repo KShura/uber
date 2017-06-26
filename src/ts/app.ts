@@ -24,6 +24,20 @@ $(function() {
             reviewsSlider();
         }
     }); 
+
+    $('.faq .question .title').click(function() {
+        if(!$(this).closest('.question').hasClass("open")) {            
+            $(this).closest('.question').addClass('open');
+            $(this).siblings('.answer').show('fast');
+        } else {
+            $(this).siblings('.answer').hide('fast');
+            $(this).closest('.question').removeClass('open');
+        }
+    });
+
+    $('input[name="phone"]').mask('+7 999 999 99 99');
+
+    $('select').styler();
 }); 
 
 function showInputName(input:any) {

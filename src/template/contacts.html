@@ -10,7 +10,13 @@
         </ul>
 
         <div class="main">
-            <p class="city">Контакты в <span>Санкт-Петербурге</span></p>
+            <p class="city_title">Контакты в </p>
+                <span class="select_city">
+                    <select class="city">
+                        <option value="spb">Санкт-Петербурге</option>
+                        <option value="kr">Краснодаре</option>
+                    </select>
+                </span>
             <p>г. Санкт-Петербург,<br>Выборгское шоссе, д. 212, офис 9с</p>
             <p><span class="title">Телефон:</span>+7 (812) 995-38-05<br>+7 (812) 995-38-05</p>
             <p><span class="title">Е-mail:</span>info@spb-uber.ru</p>
@@ -35,13 +41,13 @@ function init () {
         }),
 
         myPlacemark1 = new ymaps.Placemark([ 59.932464, 30.351801 ], {
-            balloonContent: '[[++site_name]]'
+            balloonContent: ''
         }, {
             iconLayout: 'default#image',
             
-            iconImageHref: '/assets/img/ymarker.png',
-            iconImageSize: [48, 66],
-            iconImageOffset: [-24, -66],
+            iconImageHref: '/img/ymarker.png',
+            iconImageSize: [39, 53],
+            iconImageOffset: [-20, -53],
         });       
     myMap.geoObjects.add(myPlacemark1);
 }

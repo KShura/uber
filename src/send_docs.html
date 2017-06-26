@@ -1,0 +1,62 @@
+    //= template/head.html
+
+    //= template/header.html
+
+    //= template/breadcrumbs.html
+
+    <div class="wrapper">
+        <div class="send_docs">
+            <h1>Отправить документы</h1>
+            <h3>Сделайте фото оригиналов документов на телефон или отсканируйте их. Важно, чтобы документы хорошо читались</h3>
+            <form method="POST" action="#">
+                <h4>Личные данные</h4>
+                <div class="field">
+                    <div class="left">Ваш город</div>
+                    <div class="right">
+                        <div class="select">
+                            <select name="city">
+                                <option value="1">Санкт-Петербург</option>
+                                <option value="1">Краснодар</option>
+                            </select> 
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">Фамилия<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="last_name" placeholder="">
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">Имя<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="name" placeholder="">
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">Мобильный телефон<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="phone" placeholder="">
+                        <p class="desc">Мы позвоним на этот номер, если будут замечания по документам</p>
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left">Электронная почта<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="email" placeholder="">
+                        <p class="desc">На этот адрес вы получите письмо с информацией о заявке</p>                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <input type="submit" value="отправить">
+                <h4>Документы</h4>
+            </form>
+        </div>
+    </div>
+
+    //= template/contacts.html
+
+    //= template/footer.html

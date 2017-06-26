@@ -1,0 +1,52 @@
+    //= template/head.html
+
+    //= template/header.html
+
+    //= template/breadcrumbs.html
+
+<div class="wrapper">
+    <h1>Контакты в&nbsp;<span class="select_city">
+            <select class="city">
+                <option value="spb">Санкт-Петербурге</option>
+                <option value="kr">Краснодаре</option>
+            </select>
+        </span></h1></h1></h1>
+    <div class="contacts_page">    
+        <div class="map" id="map"></div>
+        <div class="left">
+            <p class="city">Санкт-Петербург</p>
+            <p>191023, Санкт-Петербург, ул. Садовая, дом 26, лит. А, пом. 3Н (вход с ул. Ломоносова, дом 10)</p>
+            <p>Телефон:<br>+7 (812) 995-38-05</p>
+            <p>Е-mail:<br>spb@domain.ru</p>
+            <a href="#popup_form" class="button">Связаться с нами</a> 
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map('map', {
+            center: [ 59.932464, 30.351801 ],
+            zoom: 15,
+            controls: ["zoomControl", "geolocationControl", "routeEditor"]
+        }),
+
+        myPlacemark1 = new ymaps.Placemark([ 59.932464, 30.351801 ], {
+            balloonContent: ''
+        }, {
+            iconLayout: 'default#image',
+            
+            iconImageHref: '/img/ymarker.png',
+            iconImageSize: [39, 53],
+            iconImageOffset: [-20, -53],
+        });       
+    myMap.geoObjects.add(myPlacemark1);
+}
+</script>
+
+
+    //= template/footer.html

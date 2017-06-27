@@ -4,7 +4,7 @@ function reviewsSlider() {
     $('.reviews_slider').carouFredSel({
 		circular: true,
 		infinite: false,
-		width: 1160,
+		responsive: true,
 		prev: '#reviews-left',
     	next: '#reviews-right',
         pagination: "#reviews-pager",

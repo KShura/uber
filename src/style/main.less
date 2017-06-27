@@ -8,6 +8,14 @@
 @lightitalic: MullerLightItalic;
 @rouble: Rouble;
 
+html {
+    overflow-x: hidden;
+}
+
+.for_mobile {
+    display: none;
+}
+
 html, body {
     min-width: 1220px;
 }
@@ -643,10 +651,11 @@ header {
             padding: 2px 0;
             position: relative;
 
+            @media (min-width:1025px) {
             &:hover ul {
                 display: block;
             }
-
+            }
             ul {
                 display: none;
                 position: absolute;
@@ -687,20 +696,22 @@ header {
             }
             
             &.drivers {
-                margin-right: 7px; 
-                font-family: @regular;
-                padding-bottom: 20px;
-                top: 10px;
-            
-                & > a {
-                    padding: 8px 35px 7px 15px;
-                    border-radius: 6px;
-                    background: url(../img/down.png) right 16px center no-repeat;
-                    border: 1px solid #dbe4eb;
-                }
-                &:hover > a {
-                    background: url(../img/up.png) right 16px center no-repeat #dbe4eb;
-                    color: @main_color;
+                @media (min-width:1025px) {
+                    margin-right: 7px; 
+                    font-family: @regular;
+                    padding-bottom: 20px;
+                    top: 10px;
+                
+                    & > a {
+                        padding: 8px 35px 7px 15px;
+                        border-radius: 6px;
+                        background: url(../img/down.png) right 16px center no-repeat;
+                        border: 1px solid #dbe4eb;
+                    }
+                    &:hover > a {
+                        background: url(../img/up.png) right 16px center no-repeat #dbe4eb;
+                        color: @main_color;
+                    }
                 }
             }
         }
@@ -1144,7 +1155,7 @@ section.man_banner {
             font-size: 20px;
             font-family: @regular;
             line-height: 30px;
-            margin: 65px 0 25px;
+            margin: 60px 0 20px;
             padding: 0 10px;
         }
 
@@ -1301,16 +1312,22 @@ section.man_banner {
             font-size: 140px;
             font-family: @bold;
             line-height: 155px;
+            margin: 0;
         }
 
         .desc {
             font-size: 40px;
             font-family: @light;
+            margin: 0;
         }
     }
 }
 
 .reviews {
+
+    .caroufredsel_wrapper {
+        //width: 100%!important;
+    }
 
     &.page {
 
@@ -1357,6 +1374,7 @@ section.man_banner {
                 display: inline-block;
                 width:240px;
                 vertical-align: middle; 
+                margin: 0;
             }
 
             .name {
@@ -1378,6 +1396,7 @@ section.man_banner {
                 line-height: 24px;
                 font-family: @lightitalic;
                 display: block;
+                margin: 0;
                 margin-top: 25px;
                 position: relative;
 
@@ -1454,6 +1473,7 @@ section.man_banner {
 section.question {
     height: 1080px;
     background: url(../img/question_block.png) bottom center no-repeat;
+    margin-bottom: -60px;
 
     .wrapper {
         height: 100%;
@@ -1693,7 +1713,7 @@ footer {
     .left_banner {
         width: 100%;
         height: 380px;
-        background: url(../img/left_banner.png);
+        background: url(../img/left_banner.png) center bottom;
         padding: 25px 30px;
         color: #fff;
         margin: 30px 0;
@@ -1701,6 +1721,7 @@ footer {
         .title {
             font-size: 20px;
             font-family: @medium;
+            margin: 0;
         }
 
         .number {
@@ -1713,6 +1734,7 @@ footer {
             font-size: 16px;
             line-height: 24px;
             font-family: @light;
+            margin: 0;
 
             span {
                 font-family: @bold;
@@ -2134,7 +2156,7 @@ footer {
         display: block;
     }
 
-    &:after {
+    .wrapper:after {
         content: "";
         width: 348px;
         height: 449px;
@@ -2144,7 +2166,7 @@ footer {
         right: -130px;
     }
 
-    &:before {
+    .wrapper:before {
         content: "";
         width: 381px;
         height: 492px;
@@ -2262,7 +2284,7 @@ footer {
 
 .license_steps {
     width: 100%;
-    background: url(../img/steps.png) top 55px center no-repeat;
+    background: url(../img/steps2.png) top 70px center no-repeat;
 
     li {
         display: inline-block;

@@ -200,6 +200,67 @@ input[type="submit"]:hover, a.button:hover {
     box-shadow: 0 24px 32px -10px rgba(0, 0, 0, 0.55);
 }
 
+input[type="checkbox"] {
+    
+    & + span.checkbox {
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border: 1px solid @link_color;
+        border-radius: 3px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+        margin-top: 3px;
+    }
+
+    &:checked + span.checkbox {
+        background: url(../img/check_white.png) center center no-repeat @link_color;
+    }
+}
+
+span.check_desc {
+    display: inline-block;
+    font-size: 16px;
+    font-family: @light;
+    line-height: 24px;
+    vertical-align: top;
+}
+
+.file {
+    font-size: 16px;
+    line-height: 24px;
+
+    .file_button {
+        font-family: @medium;
+        color: #fff;
+        width: 260px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 9px 0 0 40px;
+        background: url(../img/file.png) left 50px center no-repeat @link_color;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #1a909a;
+        }
+    }
+
+    .file_desc {
+        font-family: @light;
+        color: #748a8d;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 20px;    
+        width: 270px;
+        max-height: 40px;
+        overflow: hidden;
+    }
+}
+
 a.button2 {
         display: block;
         width: 160px;
@@ -290,6 +351,10 @@ select {
             display: block;
             padding: 11px 17px;
             cursor: pointer;
+
+            &:last-child {
+                border-radius: 0 0 10px 10px;
+            }
 
             &:hover {   
                 background: #f0feff;
@@ -1586,7 +1651,7 @@ footer {
         }
     }
 
-    .button {
+    .buttons .button {
         color: #fff;
         height: 40px;
         width: 160px;
@@ -2312,29 +2377,34 @@ footer {
     }
 
     .field {
-        margin: 20px 0;
-        
+        margin: 5px 0;
+
         .left {
             width: 300px;
             display: inline-block;
             text-align: right;
             padding-right: 15px;
-            vertical-align: top;
-            padding-top: 11px;
+            vertical-align: middle;
+            position: relative;
 
             .star {
                 color: @link_color;
+                position: absolute;
+                right: 7px;
+                top: 0px;
             }
         }
 
         .right {
             width: 560px;
             display: inline-block;
+            vertical-align: middle;
 
             .desc {
                 color: #b2c1cc;
                 font-size: 14px;
                 margin: 3px 0;
+                font-family: @thin;
             }
 
             .error_message {
@@ -2348,5 +2418,60 @@ footer {
             
             }
         }
+
+        &.textarea {
+            margin-bottom: 15px;
+
+            .right{
+                vertical-align: top;
+            }
+
+            .left {
+                vertical-align: top;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    label.type {
+        float: left;
+        display: block;
+
+        h2 {
+            color: @link_color;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-bottom: 0;
+        }
+        
+        input:checked + h2 {
+            color: @main_color;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        &:first-child {
+            margin-right: 60px;
+        }
+    }
+
+    .card {
+        width: 125px;
+        margin-right: 15px;
+        display: inline-block;
+        text-align: center;
+
+        &.last {
+            margin-right: 0;
+        }
+    }
+
+    label.check {
+        display: block;
+        margin-bottom: 15px;
     }
 }

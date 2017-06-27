@@ -20,11 +20,17 @@
                             </select> 
                         </div>
                     </div>
+                    
+                    <div class="left"></div>
+                    <div class="right"></div>
                 </div>
                 <div class="field">
                     <div class="left">Фамилия<span class="star">*</span></div>
                     <div class="right">
                         <input type="text" class="required" name="last_name" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                                             
                         <p class="error_message">Обязательное поле!</p>
                     </div>
                 </div>
@@ -32,6 +38,9 @@
                     <div class="left">Имя<span class="star">*</span></div>
                     <div class="right">
                         <input type="text" class="required" name="name" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                                             
                         <p class="error_message">Обязательное поле!</p>
                     </div>
                 </div>
@@ -39,20 +48,211 @@
                     <div class="left">Мобильный телефон<span class="star">*</span></div>
                     <div class="right">
                         <input type="text" class="required" name="phone" placeholder="">
-                        <p class="desc">Мы позвоним на этот номер, если будут замечания по документам</p>
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">   
+                        <p class="desc">Мы позвоним на этот номер, если будут замечания по документам</p>                                          
                         <p class="error_message">Обязательное поле!</p>
                     </div>
                 </div>
                 <div class="field">
                     <div class="left">Электронная почта<span class="star">*</span></div>
                     <div class="right">
-                        <input type="text" class="required" name="email" placeholder="">
-                        <p class="desc">На этот адрес вы получите письмо с информацией о заявке</p>                        
+                        <input type="text" class="required" name="email" placeholder="">  
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">     
+                        <p class="desc">На этот адрес вы получите письмо с информацией о заявке</p>                                         
                         <p class="error_message">Обязательное поле!</p>
                     </div>
                 </div>
-                <input type="submit" value="отправить">
+                <div class="field">
+                    <div class="left"></div>
+                    <div class="right">
+                        <label class="check">
+                            <input type="checkbox" name="check">
+                            <span class="checkbox"></span>
+                            <span class="check_desc">Я соглашаюсь с условиями обработки<br>и использования моих персональных данных</span>
+                        </label>
+                    </div>
+                </div>
                 <h4>Документы</h4>
+                <div class="field">
+                    <div class="left">Свидетельство о регистрации ТС<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="SR">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">     
+                        <p class="desc">Загрузите сторону с информацией об автомобиле</p>                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Страховой полис ОСАГО (сторона&nbsp;1)<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="osago">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>                        
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                             
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Страховой полис ОСАГО (сторона&nbsp;2)<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="osago2">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>                        
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                             
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Водительское удостоверение<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="driver_license">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>                        
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                             
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Водительское удостоверение<br>(вторая сторона)</div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="" name="diver_license2">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">  
+                        <p class="desc">Если у вас права нового образца</p>                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Паспорт (разворот с фото)<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="passport">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>                        
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Личное фото<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="photo">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="desc">Возможные форматы и требования к загружаемым файлам.<br>Форматов может быть довольно много.</p>                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Справка об отсутствии судимости</div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="" name="judge">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="desc">Загрузите, если имеется</p>                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Фото автомобиля<br>(Вид спереди-сбоку)<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="auto_photo">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="desc">Гос. номер автомобиля должен быть виден</p>                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Фото задних сидений<br>(в проем задней двери)<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="auto_photo2">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>                        
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                                                
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Фото детского кресла<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="" name="auto_photo3">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                                
+                        <p class="desc">При наличии</p>                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left"></div>
+                    <div class="right">
+                        <input type="submit" value="Отправить">
+                    </div>
+                </div>
             </form>
         </div>
     </div>

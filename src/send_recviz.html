@@ -1,0 +1,211 @@
+    //= template/head.html
+
+    //= template/header.html
+
+    //= template/breadcrumbs.html
+
+    <div class="wrapper">
+        <div class="send_docs">
+            <form method="POST" action="#">
+                <label class="type">
+                    <input type="radio" name="type" value="send" checked>
+                    <h2>Отправить реквизиты</h2>
+                </label>
+                <label class="type">
+                    <input type="radio" name="type" value="change">
+                    <h2>Сменить реквизиты</h2>
+                </label>
+                <div class="clearfix"></div>
+                <h3>Проверьте правильность всех заполненных данных. Ошибки могут привести к задержке выплат до 10 дней.</h3>
+                <div class="field">
+                    <div class="left">Ваш город</div>
+                    <div class="right">
+                        <div class="select">
+                            <select name="city">
+                                <option value="1">Санкт-Петербург</option>
+                                <option value="1">Краснодар</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="field">
+                    <div class="left">ФИО водителя<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" id="fio" class="required" name="name" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left"></div>
+                    <div class="right">
+                        <label class="check">
+                            <input type="checkbox" name="same_fio">
+                            <span class="checkbox"></span>
+                            <span class="check_desc">ФИО водителя и получателя средств совпадают</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">ФИО получателя средств<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" id="fio2" class="required" name="name2" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">ИНН банка<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="inn" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">БИК банка<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="bik" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Счет получателя платежа*<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="number" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <div class="left">Номер банковской карты<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required card number" maxlength="4" name="card1" placeholder="">
+                        <input type="text" class="required card number" maxlength="4" name="card2" placeholder="">
+                        <input type="text" class="required card number" maxlength="4" name="card3" placeholder="">
+                        <input type="text" class="required card number last" maxlength="4" name="card4" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+                <script>
+                $('.card').groupinputs();
+                </script>
+
+                
+
+                <div class="field textarea">
+                    <div class="left">Назначение платежа</div>
+                    <div class="right">
+                        <textarea name="target" placeholder=""></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Реквизиты карты<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="recviz">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>                         
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                           
+                        <p class="desc">Загрузите фото или скан реквизитов,<br>обычно их выдают в банке вместе с картой</p>                     
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Мобильный телефон<span class="star">*</span></div>
+                    <div class="right">
+                        <input type="text" class="required" name="phone" placeholder="">
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">        
+                        <p class="desc">Мы позвоним на этот номер, если будут замечания по документам</p>                                      
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Заявление о переводе на стороннее лицо<br><a href="#">Скачать бланк заявления</a><span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="claim">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>                       
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                        
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="left">Паспорт водителя (разворот с фото)<span class="star">*</span></div>
+                    <div class="right">
+                        <label class="file">
+                            <input type="file" class="required" name="passport">
+                            <span class="file_button">Выберите файл</span>
+                            <span class="file_desc">Файл не выбран</span>
+                        </label>                       
+                    </div>
+                    <div class="left"></div>
+                    <div class="right">                                             
+                        <p class="error_message">Обязательное поле!</p>
+                    </div>
+                </div>
+
+                <div class="field textarea">
+                    <div class="left">Комментарий</div>
+                    <div class="right">
+                        <textarea name="comment" placeholder=""></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left"></div>
+                    <div class="right">
+                        <label class="check">
+                            <input type="checkbox" name="check">
+                            <span class="checkbox"></span>
+                            <span class="check_desc">Я соглашаюсь с условиями обработки<br>и использования моих персональных данных</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="left"></div>
+                    <div class="right">
+                        <input type="submit" value="Отправить">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    //= template/contacts.html
+
+    //= template/footer.html

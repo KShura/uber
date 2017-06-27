@@ -23,28 +23,37 @@ class Form implements iForm {
   validation() : boolean {
     let valid:boolean = true;
 
-    $.each($(this.form).find('input.requi#d02121'), function(i, val) {
+    $.each($(this.form).find('input.required'), function(i, val) {
+      //alert($(this).attr('name') + " " +$(this).val())
+      let a = $(this).val();
       if($(this).val() == "") {
         valid = false; 
         $(this).css('border', '2px solid #d02121');
-        if ($(this).siblings().is(".error_message")) { 
-          $(this).siblings('.error_message').show();
+        if ($(this).closest('.field').find('p').is(".error_message")) { 
+          $(this).closest('.field').find('.error_message').show();
         }
       } else {
         $(this).css('border', ''); 
-        if  ($(this).siblings().is(".error_message")) { 
-          $(this).siblings('.error_message').hide();
+        if  ($(this).closest('.field').find('p').is(".error_message")) { 
+          $(this).closest('.field').find('.error_message').hide();
         }
       }
      });
+
+     if($(this.form).find('input').is('input[name="check"]')) {
+       if(!$(this.form).find('input[name="check"]').prop("checked")) {
+         $(this.form).find('input[name="check"] + span.checkbox').css('border', '2px solid #d02121');
+         $(this.form).find('.check_desc').css('textDecoration', 'underline');
+       } else {         
+         $(this.form).find('.check_desc').css('textDecoration', '');
+         $(this.form).find('input[name="check"] + span.checkbox').css('border', '');
+       }
+     }
 
     return valid;
   }
 
   ajax(): void {
-    let name:string =  $(this.form).find("input[name='name']").val();   
-
-    let phone =  $(this.form).find("input[name='phone']").val();
 
     let valid:boolean = this.validation();
     if(valid) {
@@ -76,16 +85,5 @@ $(function() {
         let form:Form = new Form(this, url, dataArray, form_type);
         var formData = new FormData(this);
         let response = form.ajax();
-      });
-
-      $('input[type="file"]').change(function() {
-        let val = $(this).val();
-        let regV = /[^\\/]+\.[A-Za-z]+/gi; 
-        let result = val.match(regV);
-        if(result != null) {
-          $(this).siblings('span').html(result);
-        } else {
-          $(this).siblings('span').html('Добавить фото');
-        }
       });
 });      

@@ -130,9 +130,9 @@ p {
 :focus:-moz-placeholder           {color:transparent;}
 :focus:-ms-input-placeholder      {color:transparent;}
 
-input[type="radio"]{display: none!important;}
-input[type="checkbox"]{display: none!important;}
-input[type="file"]{display: none!important;}
+// input[type="radio"]{display: none!important;}
+// input[type="checkbox"]{display: none!important;}
+// input[type="file"]{display: none!important;}
 
 input[type="text"] {
     font-family: @light;
@@ -199,13 +199,13 @@ input[type="submit"], a.button {
     font-size: 16px;
     cursor: pointer;
     font-family: @regular;
-    box-shadow: 0 21px 30px -10px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 21px 20px -10px rgba(0, 0, 0, 0.55);
     text-decoration: none;
 }
 
 input[type="submit"]:hover, a.button:hover {
     background: #1a909a;
-    box-shadow: 0 24px 32px -10px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 24px 22px -10px rgba(0, 0, 0, 0.55);
 }
 
 input[type="checkbox"] {
@@ -315,14 +315,16 @@ a.button {
     }
 }
 
-select {
-    display: none;
-}
+
 
 .select, .select_city {
     position: relative;
     z-index: 3;
     text-align: left;
+
+    select {
+        display: none;
+    }
 }
 
 .select .jq-selectbox {
@@ -518,6 +520,10 @@ select::-ms-expand {
     max-height: 92%;
     max-height: calc(~"100% - 70px");
 
+    input[type="radio"]{display: none;}
+    input[type="checkbox"]{display: none;}
+    input[type="file"]{display: none;}
+
     .wrap {
         position: absolute;
         overflow-y: auto;
@@ -615,6 +621,7 @@ select::-ms-expand {
             margin-left: 40px;
             width: auto;
             height: auto;
+            background: none;
 
             &:hover {
                 text-decoration: none; 
@@ -784,6 +791,10 @@ header {
 .main_banner {
     height: 560px;
     background: url(../img/main_banner.png);
+
+    .for_mobile {
+        display: none;
+    }
 
     .title {
         font-family: @medium;
@@ -1426,20 +1437,20 @@ section.man_banner {
             height: 60px;
 
             &.reviews-left {
-                background: url(../img/arrow-left.png);
+                background-image: url(../img/arrow-left.png);
                 left: -70px;
 
                 &:hover {
-                    background: url(../img/arrow-left_active.png);
+                    background-image: url(../img/arrow-left_active.png);
                 }
             }
 
             &.reviews-right {
-                background: url(../img/arrow-right.png);
+                background-image: url(../img/arrow-right.png);
                 right: -70px;
 
                 &:hover {
-                    background: url(../img/arrow-right_active.png);
+                    background-image: url(../img/arrow-right_active.png);
                 }
             }
         }
@@ -1537,6 +1548,7 @@ section.question {
     height: 460px;
     box-shadow: 0 -7px 25px 0 rgba(0, 0, 0, 0.15);
     margin-top: 60px;
+    height: auto;
 
     .map {
         width: 50%;
@@ -1629,6 +1641,10 @@ section.question {
 
         a {
             display: inline-block;
+
+            img {
+                display: block;
+            }
 
             &:last-child {
                 margin-left: 20px;
@@ -1765,10 +1781,21 @@ footer {
     font-family: @light;
     font-size: 16px;
 
+    select {
+        display: none;
+    }
+
+    @media (min-width:768px) {
+        .jq-selectbox__dropdown {
+            display: none!important;
+        }
+    }
+
     .tr {
 
         .td {
             padding: 17px 0 15px;
+            vertical-align: middle;
 
             &:first-child {
                 width: 400px;
@@ -2196,6 +2223,7 @@ footer {
             color: @link_color;
             background: url(../img/down.png) right center no-repeat;
             background-size: 13px;
+            padding-right: 20px;
             max-width: none;
             cursor: pointer;
         }
@@ -2392,6 +2420,10 @@ footer {
 .send_docs {
     font-size: 16px;
     font-family: @light;
+
+    input[type="radio"]{display: none;}
+    input[type="checkbox"]{display: none;}
+    input[type="file"]{display: none;}
 
     .select .jq-selectbox .jq-selectbox__dropdown {
         position: absolute;

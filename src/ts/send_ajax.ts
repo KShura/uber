@@ -25,7 +25,7 @@ class Form implements iForm {
 
     $.each($(this.form).find('input.required'), function(i, val) {
       //alert($(this).attr('name') + " " +$(this).val())
-      let a = $(this).val();
+      //let a = $(this).val();
       if($(this).val() == "") {
         valid = false; 
         $(this).css('border', '2px solid #d02121');

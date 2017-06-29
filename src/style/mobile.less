@@ -1,28 +1,51 @@
 @import (reference) "main.less";
 
+@media (max-width:320px) {
+    html {
+        overflow-x:auto;
+    }
+
+    body {
+        width: 320px;
+        overflow-x: hidden;
+    }
+}
+
 @media (max-width: 767px) {
     html, body {
         min-width: 320px;
     }
 
+    body {        
+        overflow-x: hidden;
+    }
+
     .wrapper {
-        width: 320px;
+        width: 100%;
         padding: 0 5px;
         //overflow-y: hidden;
      }
 
      h1, h2 {
          font-size: 22px;
+         max-width: 320px;
+         margin: 0 auto;
          margin-bottom: 10px;
      }
 
      h1 .select_city .jq-selectbox .jq-selectbox__select {
-         font-size: 18px;
+         font-size: 22px;
+     }
+
+     h1 .select_city .jq-selectbox .jq-selectbox__select .jq-selectbox__select-text {
+        background-size: 10px;
+        padding-right: 15px;
      }
 
      p {
          font-size: 14px;
          line-height: 21px;
+         margin: 10px 0;
      }
 
      input[type="submit"], a.button {
@@ -36,10 +59,33 @@
      header {
          padding: 10px 0;
          position: relative;
-         z-index: 3;
+         z-index: 4;
+
+         .select_city {
+             display: none;
+         }
+
+         .social {
+             display: none;
+         }
 
          .right {
-             display: none;
+             position: absolute;               
+             top: -3px;
+             width: auto;
+             right: 48px;
+         }
+
+         .phones {
+            //  position: absolute;
+             font-family: @light;
+             text-align: right;
+
+             span {
+                 display: block;
+                 margin: 0!important;
+                 padding: 2px 0;
+             }
          }
 
          .burger {
@@ -124,10 +170,15 @@
      }
 
      .advantages  {
+
+         h2 {
+             margin-top: 20px;
+         }
+
          .first_line > div {
-             width: auto;;
+             width: 310px;
              display: block;
-             margin: 30px 0;
+             margin: 30px auto;
              height: auto;
              padding-bottom: 10px;
 
@@ -150,6 +201,10 @@
                  margin-top: 20px;
              }
 
+             &:last-child {
+                 margin-right: auto;
+             }
+
              .desc {
                  font-size: 14px;
                  line-height: 21px;
@@ -160,14 +215,14 @@
              margin-top: 50px;
 
              & > div {
-                 width: auto;
-                 margin: 20px 0;
+                 width: 310px;
+                 margin: 20px auto;
                  display: block;
                  height: auto;
                  padding: 20px;
 
                  &:first-child {
-                     margin-right: 0;
+                     margin-right: auto;;
                  }
 
                  .icon {
@@ -191,9 +246,11 @@
          padding: 0;
 
          ul {
-             width: 100%;
-             margin: 20px 0!important;
+             width: 310px;
+             margin: 20px auto!important;
              padding: 20px;
+             float: none;
+             display: block;
 
              li {
                  margin-left: 0;
@@ -210,7 +267,10 @@
 
      section.man_banner {
          text-align: center;
-         padding-top: 175px;
+         padding-top: 93px;
+         margin: 30px 0;
+         background: url(../img/man_banner_mobile.png) top center no-repeat;
+         height: 320px;
 
          .wrapper{
              width: 320px;
@@ -222,16 +282,566 @@
     }
 
     .steps {
+        padding: 20px 0;
         .wrapper {
             background: none;
 
             & > div {
                 margin: 20px auto!important;
                 display: block;
+                height: auto;
+                padding-bottom: 10px;
 
                 &.docs {
-                    width: 100%;
+                    width: 310px;
+                    overflow-x: hidden;
+
+                    img {
+                        max-width: none;
+                        width: auto;
+                    }
                 }
+
+                .title {
+                    font-size: 18px;
+                    margin: 40px 0 5px;
+                }
+
+                .desc {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .car {
+        .wrapper {
+            padding: 20px 0 40px;
+            padding-left: 5px;
+
+            &:before {
+                display: none;
+            }
+        }
+        .car_man {
+            width: 100%;
+            max-width: 310px;
+            margin: 0 auto 65px;
+        }
+
+        a.button {
+            max-width: 310px;
+            margin: 0 auto;
+        }
+    }
+
+    .comission_banner  {
+        height: auto;
+        padding: 30px 0;
+        margin-bottom: 30px;
+        text-align: center;
+
+        .left {
+            width: 100%;
+            display: block;
+            
+            .button {
+                margin: 0 auto;
+            }
+
+            .desc {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .right {
+            width: 100%;
+            margin-top: 20px;
+            display: block;
+
+            .title {
+                font-size: 40px;
+                line-height: 40px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 20px;
+            }
+
+            .desc {
+                font-size: 20px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .reviews {
+
+        .wrapper  {
+            width: 320px;
+        }
+
+        ul {
+            li {
+                width: 310px;
+                margin: 0;
+
+                .avatar {
+                    width: 45px;
+                    height: 45px;
+                    margin-right: 15px;
+                }
+
+                .name {
+                    font-size: 18px;    
+                    line-height: 26px;
+                }
+
+                .text {
+                    font-size: 14px;
+                    line-height: 21px;
+                    margin-top: 15px;
+                }
+            }
+        } 
+
+        .control {
+            top: -8px;
+            
+            a.reviews-right {
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                right: 0;
+
+                &:hover {                 
+                    background-image: url(../img/arrow-right.png);
+                }
+            }
+
+            a.reviews-left {
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                left: 0;
+
+                &:hover {                 
+                    background-image: url(../img/arrow-left.png);
+                }
+            }
+        }
+    }
+
+    section.question {
+        height: auto;
+        padding: 40px 0;
+        margin-top: 30px;
+        margin-bottom: -35px;
+
+        .form {
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
+            position: relative;
+            left: 0;
+            bottom: 0;
+            padding: 30px 15px;
+
+            .desc {
+                font-size: 24px;
+                line-height: 36px;
+            }
+
+            .field {
+                width: 100%;
+            }
+
+            .animation {
+                height: 75px;   
+            }
+
+            input {
+                height: 40px;
+            }
+        }
+    }
+
+    .contacts {
+        margin-top: 35px;
+
+        .wrapper {
+            padding-right: 5px;
+            padding-top: 25px;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+            width: 310px;
+        }
+
+        .main {
+            width: 310px;
+        }
+
+        .map {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+
+        .links {
+            margin: 20px 0;
+
+            p {
+                margin: 10px 0;
+            }
+
+            a {
+                width: 140px;
+            }
+        }
+    }
+
+    footer {
+        font-size: 12px;
+        .wrapper {
+            padding-bottom: 18px;
+        }
+
+        .wrapper > div {
+            display: block;
+        }
+
+        .polite {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .buttons a {
+            display: block;
+            margin: 10px 0;
+            width: 180px!important;
+        }
+    }
+
+    .breadcrumbs {
+        margin-bottom: 15px;
+    }
+
+    .left_part {
+        width: 100%;
+
+        .left_menu {
+            font-size: 16px;
+            padding-bottom: 10px;
+
+            li a {
+                padding: 10px 25px;
+            }
+        }
+
+        .left_banner {
+            max-width: 360px;
+            margin: 30px auto;
+        }
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .drivers_demands {
+        p.title {
+            font-size: 18px;
+            line-height: 26px;
+
+        }
+        ul li {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .advantages.for_content .first_line > div {
+        margin: 30px auto;
+    }
+
+    .connect {
+        text-align: center;
+        padding: 43px 0;
+
+        .title {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        a {
+            display: block;
+            margin: 20px auto!important;
+        }
+    }
+
+    .instruction {
+        p {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        ul {
+            li {
+                text-align: center;
+                width: 100%;
+                display: block;
+                padding: 0;
+                font-size: 16px;
+                line-height: 24px;
+
+                .img {
+                    margin: 5px auto 0;
+                }
+            }
+        }
+    }
+
+    .table.cars {
+        font-size: 14px;
+
+        .jq-selectbox__select-text {
+            display: inline-block;
+            padding-right: 18px;
+            background: url(../img/down.png) right top 4px no-repeat;
+        }
+
+        .jq-selectbox__dropdown {
+            position: absolute;
+            top: 40px;
+            background: #fff;
+            border:1px solid @link_color;
+            border-radius: 10px;
+            padding: 0 10px;
+            z-index: 2;
+
+            li {
+                margin: 10px 0;
+                display: block;
+            }
+        }
+
+        .tr {
+
+            &.header {
+                font-size: 16px;
+                z-index: 2;
+                position: relative;
+            }
+
+            .td {
+                width: 30%!important;
+                display: none; 
+                position: relative;
+
+                &:first-child{
+                    width: 70%!important;
+                    display: table-cell!important;
+                }
+
+                &:nth-child(2) {
+                    display: table-cell;
+                }
+            }
+        }
+    }
+
+    .find_car {
+        height: auto;
+        text-align: center;
+        padding: 25px 10px;
+
+        .title {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .desc {
+            font-size: 17px;
+            line-height: 26px;
+            margin: 20px 0;
+        }
+
+        .button {
+            margin: 0 auto;
+        }
+    }
+
+    .documents  {
+        width: 320px;
+        margin: 0 auto;
+
+        li {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 25px;
+
+            img {
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .documents_links {
+        a {
+            display: block;
+            margin: 20px auto;
+
+            &.example {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .license_form {
+        padding: 25px 15px 20px;
+        text-align: center;
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        span {
+            float: none!important;
+            margin: 10px 0;
+            display: block;
+        }
+
+        .button {
+            margin: 0 auto;
+        }
+    }
+
+    .advantages2 li {
+        width: 49%;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .license_steps {
+        background: none;
+
+        li {
+            display: block;
+            margin: 30px auto;
+
+            &:nth-child(3n) {
+                margin-right: auto;
+            }
+        }
+    }
+
+    .start_banner {
+        text-align: center;
+        padding: 30px;
+        height: auto;
+        margin: 30px 0 0;
+
+        .title {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .button {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    .how_match {
+        display: none;
+    }
+
+    .faq {
+        margin-top: 40px;
+
+        .question {
+            padding: 10px 20px;
+
+            .title {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .reviews.page {
+
+        .wrapper{
+            width: 100%;
+        }
+
+        ul li {
+            width: 100%;
+            margin: 20px 0!important;
+        }
+    }
+    
+    .contacts_page {
+        margin: 0;
+       
+        .left {
+            width: 100%;
+            margin-bottom: 30px;
+            float: none;
+        } 
+
+        .map {
+            float: none;
+            width: 100%;
+            height: 300px;
+            margin: 0;
+        }
+    }
+
+    .popup {
+        width: 100%!important;
+        margin-left: -50%!important;
+        width: calc(~"100% - 10px")!important;
+        margin-left: calc(~"-50% + 5px")!important;
+        padding: 5%;
+
+        .wrap {
+            width: 90%!important;
+        }
+
+        .close_a {
+            display: none!important;
+        }
+    }
+
+    .documents.popup_documents {
+        width: 100%;
+
+        li {
+            // display: block;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 15px;
+            width: 45%;
+            margin: 10px 0;
+            text-align: left;
+            text-align: center;
+
+            &:nth-child(2n-1) {
+                margin-right: 8%;
+            }
+
+            img {
+                // display: inline-block;
+                // vertical-align: middle;
+                width: auto;
+                margin: 0 auto;
+                margin-bottom: 5px;
             }
         }
     }

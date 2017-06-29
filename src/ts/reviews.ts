@@ -9,20 +9,28 @@ function reviewsSlider() {
     	next: '#reviews-right',
         pagination: "#reviews-pager",
 		scroll: { 
-            items: 3,
-            onBefore: function( data:any ) {
-				if(data.scroll.direction == "next") {
-					//data.items.old.eq( 2 ).animate({ marginRight: 20 });
-					//data.items.visible.eq( 2 ).animate({ marginRight: 0 });
+			// items : {
+            //     width: 768,
+            //     visible:
+            //         {
+            //             min: 1,
+            //             max: 1
+            //         }
+            // },
+            // items: 3,
+            // onBefore: function( data:any ) {
+			// 	if(data.scroll.direction == "next") {
+			// 		//data.items.old.eq( 2 ).animate({ marginRight: 20 });
+			// 		//data.items.visible.eq( 2 ).animate({ marginRight: 0 });
 	 
-				} else {
-				}
-			}
+			// 	} else {
+			// 	}
+			// }
 		},
 		auto: false,
 		items: {
 			visible: {
-				min: 3,
+				min: 1,
 				max: 3
 		    }
 		},

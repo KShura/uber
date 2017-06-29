@@ -8,4 +8,15 @@ $(function() {
 		}
 		$('header .top_menu').toggle('fast');
 	});
+
+	 $('select.uberType').change(function() {
+        $(this).closest('.table').find('.td').css('display', 'none');
+        $(this).closest('.table').find('.td:nth-child(' + $(this).val() + ')').css('display', 'table-cell');
+
+        $('select.uberType option[value="' + $(this).val() + '"]').prop("selected", true);
+        
+        setTimeout(function() {
+            $('input, select').trigger('refresh');
+        }, 1)
+    });
 });

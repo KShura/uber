@@ -11,7 +11,16 @@ $(function() {
 
         $('span.select_city').click(function() {
             $(this).find('.jq-selectbox__dropdown').toggle();
+            let span = $(this);
+            $(document).mouseup(function (e){ 
+            if (!span.is(e.target) // если клик был не по нашему блоку
+                && span.has(e.target).length === 0) { // и не по его дочерним элементам
+                span.find('.jq-selectbox__dropdown').hide();
+            }
         });
+
+        
+	});
 
 
     }

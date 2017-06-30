@@ -30,8 +30,12 @@ body {
     font-family: @regular, sans-serif;
     font-size: 14px;
     position: absolute;
-    padding-bottom: 80px;
+    padding-bottom: 600px;
     width: 100%;
+
+    &.nocontacts {
+        padding-bottom: 80px;
+    }
 }
 
 * {
@@ -1588,6 +1592,9 @@ section.question {
     height: 460px;
     box-shadow: 0 -7px 25px 0 rgba(0, 0, 0, 0.15);
     margin-top: 60px;
+    position: absolute;
+    width: 100%;
+    bottom: 80px;
 
     .map {
         width: 50%;

@@ -1,12 +1,21 @@
+@import (reference) "main.less";
 @media (max-width: 1320px) and (min-width: 768px) {
     html, body {
         min-width: 1007px;
+    }
+
+    body {
+        padding-bottom: 148px;
     }
 
     .wrapper {
         width: 1007px;
         padding: 0;
         //overflow-y: hidden;
+     }
+
+     .breadcrumbs {
+         margin-bottom: 30px;
      }
 
      h1, h2 {
@@ -16,6 +25,14 @@
 
      h1 .select_city .jq-selectbox .jq-selectbox__select {
          font-size: 36px;
+     }
+
+     p {
+         margin: 15px 0;
+     }
+
+     h3 {
+         margin: 20px 0;
      }
 
     header {
@@ -249,5 +266,15 @@
         .map{
             width: 490px;
         }   
+    }
+
+    .send_docs {
+        .field {
+            .right {
+                .desc {
+                    margin: 3px 0 0;
+                }
+            }
+        }
     }
 }

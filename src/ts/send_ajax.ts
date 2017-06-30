@@ -44,6 +44,7 @@ class Form implements iForm {
        if(!$(this.form).find('input[name="check"]').prop("checked")) {
          $(this.form).find('input[name="check"] + span.checkbox').css('border', '2px solid #d02121');
          $(this.form).find('.check_desc').css('textDecoration', 'underline');
+         valid = false;
        } else {         
          $(this.form).find('.check_desc').css('textDecoration', '');
          $(this.form).find('input[name="check"] + span.checkbox').css('border', '');

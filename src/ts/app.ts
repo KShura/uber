@@ -8,6 +8,12 @@ $(function() {
         $('label').click(function (event) {
             $('#' + $(event.target).attr('for')).attr('checked', "true").change();
         });
+
+        $('span.select_city').click(function() {
+            $(this).find('.jq-selectbox__dropdown').toggle();
+        });
+
+
     }
 
     $('.animation input').focus(function() {
@@ -54,7 +60,7 @@ $(function() {
         }
       });
 
-      $('input#fio').keyup(function() {
+      $('input#fio').bind("change keyup input click", function() {
         if($('input[name="same_fio"]').prop("checked")) {
             $('input#fio2').val($(this).val());  
         }
